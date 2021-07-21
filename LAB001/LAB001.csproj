@@ -46,17 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="bookmng.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="bookmng.Designer.cs">
+      <DependentUpon>bookmng.cs</DependentUpon>
     </Compile>
-    <Compile Include="userindex.cs">
+    <Compile Include="bookqry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="userindex.Designer.cs">
-      <DependentUpon>userindex.cs</DependentUpon>
+    <Compile Include="bookqry.Designer.cs">
+      <DependentUpon>bookqry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="checkinout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkinout.Designer.cs">
+      <DependentUpon>checkinout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="recordqry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recordqry.Designer.cs">
+      <DependentUpon>recordqry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="index_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="index_admin.Designer.cs">
+      <DependentUpon>index_admin.cs</DependentUpon>
     </Compile>
     <Compile Include="signin.cs">
       <SubType>Form</SubType>
@@ -72,8 +90,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="userindex.resx">
-      <DependentUpon>userindex.cs</DependentUpon>
+    <Compile Include="usermng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usermng.Designer.cs">
+      <DependentUpon>usermng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userqry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userqry.Designer.cs">
+      <DependentUpon>userqry.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="bookmng.resx">
+      <DependentUpon>bookmng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookqry.resx">
+      <DependentUpon>bookqry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checkinout.resx">
+      <DependentUpon>checkinout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recordqry.resx">
+      <DependentUpon>recordqry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="index_admin.resx">
+      <DependentUpon>index_admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -86,9 +128,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="signin.resx">
       <DependentUpon>signin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usermng.resx">
+      <DependentUpon>usermng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userqry.resx">
+      <DependentUpon>userqry.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -102,6 +151,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BKGTest1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
