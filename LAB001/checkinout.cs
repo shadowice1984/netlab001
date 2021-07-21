@@ -12,9 +12,16 @@ namespace LAB001
 {
     public partial class CheckInOut : Form
     {
+        IndexAdmin parent;
         public CheckInOut()
         {
             InitializeComponent();
+        }
+
+        public CheckInOut(IndexAdmin _parent)
+        {
+            InitializeComponent();
+            parent = _parent;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,6 +37,19 @@ namespace LAB001
         private void checkinout_Load(object sender, EventArgs e)
         {
 
+        }
+
+       
+
+        private void BackbtnOnClicked(object sender, EventArgs e)
+        {
+            this.Close();
+            parent.Show();
+        }
+
+        private void CheckInOutClose(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

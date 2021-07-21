@@ -15,8 +15,9 @@ namespace LAB001
         public IndexAdmin()
         {
             InitializeComponent();
+
         }
-        
+
 
         private void BookCheckInOutClicked(object sender, EventArgs e)
         {
@@ -40,7 +41,27 @@ namespace LAB001
 
         private void BookCheckInOut_OnClicked(object sender, EventArgs e)
         {
-            CheckInOut checkinout_window = new CheckInOut();
+            /*Console.WriteLine(checkinout_window);
+            if (checkinout_window == null)
+            {
+                Console.WriteLine("Clicked");
+                checkinout_window = new CheckInOut();
+                //checkinout_window.
+            }
+            else
+            {
+                checkinout_window.Focus();
+            }*/
+            checkinout_window = new CheckInOut(this);
+            checkinout_window.Show();
+            this.Hide();
+        }
+
+        private CheckInOut checkinout_window;
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
