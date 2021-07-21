@@ -39,17 +39,15 @@ namespace LAB001
 
         }
 
-       
 
         private void BackbtnOnClicked(object sender, EventArgs e)
         {
             this.Close();
-            parent.Show();
         }
 
-        private void CheckInOutClose(object sender, FormClosingEventArgs e)
+        private void CheckInOutClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            parent.Show();
         }
     }
 }

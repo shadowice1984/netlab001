@@ -39,29 +39,30 @@ namespace LAB001
 
         }
 
-        private void BookCheckInOut_OnClicked(object sender, EventArgs e)
+        private CheckInOut checkinout_window;
+        private BookMng bookmng_window;
+
+        private void BookMngBtnOnClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckInOutBtnOnClicked(object sender, EventArgs e)
         {
             /*Console.WriteLine(checkinout_window);
             if (checkinout_window == null)
             {
                 Console.WriteLine("Clicked");
-                checkinout_window = new CheckInOut();
                 //checkinout_window.
             }
             else
             {
-                checkinout_window.Focus();
+                checkinout_window.Show();
             }*/
+
             checkinout_window = new CheckInOut(this);
             checkinout_window.Show();
             this.Hide();
-        }
-
-        private CheckInOut checkinout_window;
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

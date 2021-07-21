@@ -86,7 +86,7 @@
             this.Name = "CheckInOut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "checkinout";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CheckInOutClose);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CheckInOutClosing);
             this.Load += new System.EventHandler(this.checkinout_Load);
             this.ResumeLayout(false);
 

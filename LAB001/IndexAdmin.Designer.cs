@@ -76,7 +76,7 @@ namespace LAB001
             this.checkinout.TabIndex = 2;
             this.checkinout.Text = "书刊借还";
             this.checkinout.UseVisualStyleBackColor = true;
-            this.checkinout.Click += new System.EventHandler(this.BookCheckInOut_OnClicked);
+            this.checkinout.Click += new System.EventHandler(this.CheckInOutBtnOnClicked);
             // 
             // button2
             // 
@@ -87,7 +87,7 @@ namespace LAB001
             this.button2.TabIndex = 3;
             this.button2.Text = "书刊管理";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.BookMngBtnOnClicked);
             // 
             // button3
             // 
