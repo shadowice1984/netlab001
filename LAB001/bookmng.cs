@@ -12,9 +12,26 @@ namespace LAB001
 {
     public partial class BookMng : Form
     {
+        public IndexAdmin parent;
+
         public BookMng()
         {
             InitializeComponent();
+        }
+        public BookMng(IndexAdmin _parent)
+        {
+            InitializeComponent();
+            parent = _parent;
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BookMngClosing(object sender, FormClosingEventArgs e)
+        {
+            parent.Show();
         }
     }
 }

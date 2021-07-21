@@ -30,10 +30,9 @@ namespace LAB001
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkinout = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.CheckInOutBtn = new System.Windows.Forms.Button();
+            this.BookMngBtn = new System.Windows.Forms.Button();
+            this.UserMngBtn = new System.Windows.Forms.Button();
             this.BookCheckInOut = new System.Windows.Forms.ToolStripMenuItem();
             this.书刊管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新书上架ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,8 +50,14 @@ namespace LAB001
             this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.QryLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.UserQryBtn = new System.Windows.Forms.Button();
+            this.RecordQryBtn = new System.Windows.Forms.Button();
+            this.BookQryBtn = new System.Windows.Forms.Button();
+            this.QryBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.QryLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -60,53 +65,45 @@ namespace LAB001
             this.pictureBox1.BackgroundImage = global::LAB001.Properties.Resources.pic1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(605, 96);
+            this.pictureBox1.Location = new System.Drawing.Point(405, 80);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(621, 439);
+            this.pictureBox1.Size = new System.Drawing.Size(517, 361);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // checkinout
+            // CheckInOutBtn
             // 
-            this.checkinout.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkinout.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.checkinout.Location = new System.Drawing.Point(39, 96);
-            this.checkinout.Name = "checkinout";
-            this.checkinout.Size = new System.Drawing.Size(179, 79);
-            this.checkinout.TabIndex = 2;
-            this.checkinout.Text = "书刊借还";
-            this.checkinout.UseVisualStyleBackColor = true;
-            this.checkinout.Click += new System.EventHandler(this.CheckInOutBtnOnClicked);
+            this.CheckInOutBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CheckInOutBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.CheckInOutBtn.Location = new System.Drawing.Point(95, 540);
+            this.CheckInOutBtn.Name = "CheckInOutBtn";
+            this.CheckInOutBtn.Size = new System.Drawing.Size(179, 79);
+            this.CheckInOutBtn.TabIndex = 2;
+            this.CheckInOutBtn.Text = "书刊借还";
+            this.CheckInOutBtn.UseVisualStyleBackColor = true;
+            this.CheckInOutBtn.Click += new System.EventHandler(this.CheckInOutBtnOnClicked);
             // 
-            // button2
+            // BookMngBtn
             // 
-            this.button2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(39, 220);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(179, 79);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "书刊管理";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.BookMngBtnOnClicked);
+            this.BookMngBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BookMngBtn.Location = new System.Drawing.Point(318, 540);
+            this.BookMngBtn.Name = "BookMngBtn";
+            this.BookMngBtn.Size = new System.Drawing.Size(179, 79);
+            this.BookMngBtn.TabIndex = 3;
+            this.BookMngBtn.Text = "书刊管理";
+            this.BookMngBtn.UseVisualStyleBackColor = true;
+            this.BookMngBtn.Click += new System.EventHandler(this.BookMngBtnOnClicked);
             // 
-            // button3
+            // UserMngBtn
             // 
-            this.button3.Location = new System.Drawing.Point(512, 596);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(681, 596);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.UserMngBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.UserMngBtn.Location = new System.Drawing.Point(537, 540);
+            this.UserMngBtn.Name = "UserMngBtn";
+            this.UserMngBtn.Size = new System.Drawing.Size(179, 79);
+            this.UserMngBtn.TabIndex = 4;
+            this.UserMngBtn.Text = "用户管理";
+            this.UserMngBtn.UseVisualStyleBackColor = true;
+            this.UserMngBtn.Click += new System.EventHandler(this.UserMngBtnOnClicked);
             // 
             // BookCheckInOut
             // 
@@ -237,15 +234,72 @@ namespace LAB001
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // QryLayout
+            // 
+            this.QryLayout.ColumnCount = 1;
+            this.QryLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.QryLayout.Controls.Add(this.UserQryBtn, 0, 1);
+            this.QryLayout.Controls.Add(this.RecordQryBtn, 0, 2);
+            this.QryLayout.Controls.Add(this.BookQryBtn, 0, 0);
+            this.QryLayout.Location = new System.Drawing.Point(761, 520);
+            this.QryLayout.Name = "QryLayout";
+            this.QryLayout.RowCount = 3;
+            this.QryLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.QryLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.QryLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.QryLayout.Size = new System.Drawing.Size(191, 121);
+            this.QryLayout.TabIndex = 5;
+            this.QryLayout.Visible = false;
+            this.QryLayout.MouseLeave += new System.EventHandler(this.QryLayerLeave);
+            // 
+            // UserQryBtn
+            // 
+            this.UserQryBtn.Location = new System.Drawing.Point(3, 43);
+            this.UserQryBtn.Name = "UserQryBtn";
+            this.UserQryBtn.Size = new System.Drawing.Size(185, 34);
+            this.UserQryBtn.TabIndex = 1;
+            this.UserQryBtn.Text = "用户查询";
+            this.UserQryBtn.UseVisualStyleBackColor = true;
+            // 
+            // RecordQryBtn
+            // 
+            this.RecordQryBtn.Location = new System.Drawing.Point(3, 83);
+            this.RecordQryBtn.Name = "RecordQryBtn";
+            this.RecordQryBtn.Size = new System.Drawing.Size(185, 35);
+            this.RecordQryBtn.TabIndex = 2;
+            this.RecordQryBtn.Text = "借还查询";
+            this.RecordQryBtn.UseVisualStyleBackColor = true;
+            // 
+            // BookQryBtn
+            // 
+            this.BookQryBtn.Location = new System.Drawing.Point(3, 3);
+            this.BookQryBtn.Name = "BookQryBtn";
+            this.BookQryBtn.Size = new System.Drawing.Size(185, 34);
+            this.BookQryBtn.TabIndex = 0;
+            this.BookQryBtn.Text = "书刊查询";
+            this.BookQryBtn.UseVisualStyleBackColor = true;
+            this.BookQryBtn.Click += new System.EventHandler(this.BookQryOnClicked);
+            // 
+            // QryBtn
+            // 
+            this.QryBtn.Location = new System.Drawing.Point(772, 540);
+            this.QryBtn.Name = "QryBtn";
+            this.QryBtn.Size = new System.Drawing.Size(167, 79);
+            this.QryBtn.TabIndex = 6;
+            this.QryBtn.Text = "信息查询";
+            this.QryBtn.UseVisualStyleBackColor = true;
+            this.QryBtn.MouseEnter += new System.EventHandler(this.QryBtnEntered);
+            // 
             // IndexAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 682);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.checkinout);
+            this.Controls.Add(this.QryBtn);
+            this.Controls.Add(this.QryLayout);
+            this.Controls.Add(this.UserMngBtn);
+            this.Controls.Add(this.BookMngBtn);
+            this.Controls.Add(this.CheckInOutBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -258,16 +312,16 @@ namespace LAB001
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.QryLayout.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button checkinout;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button CheckInOutBtn;
+        private System.Windows.Forms.Button BookMngBtn;
+        private System.Windows.Forms.Button UserMngBtn;
         private System.Windows.Forms.ToolStripMenuItem BookCheckInOut;
         private System.Windows.Forms.ToolStripMenuItem 书刊管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 新书上架ToolStripMenuItem;
@@ -285,5 +339,10 @@ namespace LAB001
         private System.Windows.Forms.ToolStripMenuItem 设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.TableLayoutPanel QryLayout;
+        private System.Windows.Forms.Button BookQryBtn;
+        private System.Windows.Forms.Button UserQryBtn;
+        private System.Windows.Forms.Button RecordQryBtn;
+        private System.Windows.Forms.Button QryBtn;
     }
 }

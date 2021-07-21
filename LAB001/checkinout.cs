@@ -12,7 +12,7 @@ namespace LAB001
 {
     public partial class CheckInOut : Form
     {
-        IndexAdmin parent;
+        public IndexAdmin parent;
         public CheckInOut()
         {
             InitializeComponent();

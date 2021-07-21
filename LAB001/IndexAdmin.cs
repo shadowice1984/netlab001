@@ -34,17 +34,17 @@ namespace LAB001
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private CheckInOut checkinout_window;
         private BookMng bookmng_window;
+        private UserMng usermng_window;
+        //private 
+
 
         private void BookMngBtnOnClicked(object sender, EventArgs e)
         {
-
+            bookmng_window = new BookMng(this);
+            bookmng_window.Show();
+            this.Hide();
         }
 
         private void CheckInOutBtnOnClicked(object sender, EventArgs e)
@@ -63,6 +63,30 @@ namespace LAB001
             checkinout_window = new CheckInOut(this);
             checkinout_window.Show();
             this.Hide();
+        }
+
+        private void UserMngBtnOnClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QryBtnEntered(object sender, EventArgs e)
+        {
+            Console.WriteLine("!!!!");
+            QryLayout.Visible = true;
+            QryBtn.Visible = false;
+        }
+
+        private void BookQryOnClicked(object sender, EventArgs e)
+        {
+            QryLayout.Visible = false;
+            QryBtn.Visible = true;
+        }
+
+        private void QryLayerLeave(object sender, EventArgs e)
+        {
+            QryLayout.Visible = false;
+            QryBtn.Visible = true;
         }
     }
 }
