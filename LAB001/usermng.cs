@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LAB001
 {
-    public partial class usermng : Form
+    public partial class UserMng : Form
     {
-        public usermng()
+        public UserMng()
         {
             InitializeComponent();
         }

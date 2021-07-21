@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LAB001
 {
-    public partial class bookmng : Form
+    public partial class BookMng : Form
     {
-        public bookmng()
+        public BookMng()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LAB001
 {
-    public partial class index_admin : Form
+    public partial class IndexAdmin : Form
     {
-        public index_admin()
+        public IndexAdmin()
         {
             InitializeComponent();
         }
@@ -40,7 +40,7 @@ namespace LAB001
 
         private void BookCheckInOut_OnClicked(object sender, EventArgs e)
         {
-            checkinout checkinout_window = new checkinout;
+            CheckInOut checkinout_window = new CheckInOut();
         }
     }
 }

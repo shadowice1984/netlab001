@@ -46,79 +46,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bookmng.cs">
+    <Compile Include="BookMng.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="bookmng.Designer.cs">
-      <DependentUpon>bookmng.cs</DependentUpon>
+    <Compile Include="BookMng.Designer.cs">
+      <DependentUpon>BookMng.cs</DependentUpon>
     </Compile>
-    <Compile Include="bookqry.cs">
+    <Compile Include="BookQry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="bookqry.Designer.cs">
-      <DependentUpon>bookqry.cs</DependentUpon>
+    <Compile Include="BookQry.Designer.cs">
+      <DependentUpon>BookQry.cs</DependentUpon>
     </Compile>
-    <Compile Include="checkinout.cs">
+    <Compile Include="CheckInOut.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="checkinout.Designer.cs">
-      <DependentUpon>checkinout.cs</DependentUpon>
+    <Compile Include="CheckInOut.Designer.cs">
+      <DependentUpon>CheckInOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="recordqry.cs">
+    <Compile Include="RecordQry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="recordqry.Designer.cs">
-      <DependentUpon>recordqry.cs</DependentUpon>
+    <Compile Include="RecordQry.Designer.cs">
+      <DependentUpon>RecordQry.cs</DependentUpon>
     </Compile>
-    <Compile Include="index_admin.cs">
+    <Compile Include="IndexAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="index_admin.Designer.cs">
-      <DependentUpon>index_admin.cs</DependentUpon>
+    <Compile Include="IndexAdmin.Designer.cs">
+      <DependentUpon>IndexAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="signin.cs">
+    <Compile Include="SignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="signin.Designer.cs">
-      <DependentUpon>signin.cs</DependentUpon>
+    <Compile Include="SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="usermng.cs">
+    <Compile Include="UserMng.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="usermng.Designer.cs">
-      <DependentUpon>usermng.cs</DependentUpon>
+    <Compile Include="UserMng.Designer.cs">
+      <DependentUpon>UserMng.cs</DependentUpon>
     </Compile>
-    <Compile Include="userqry.cs">
+    <Compile Include="UserQry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="userqry.Designer.cs">
-      <DependentUpon>userqry.cs</DependentUpon>
+    <Compile Include="UserQry.Designer.cs">
+      <DependentUpon>UserQry.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="bookmng.resx">
-      <DependentUpon>bookmng.cs</DependentUpon>
+    <EmbeddedResource Include="BookMng.resx">
+      <DependentUpon>BookMng.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bookqry.resx">
-      <DependentUpon>bookqry.cs</DependentUpon>
+    <EmbeddedResource Include="BookQry.resx">
+      <DependentUpon>BookQry.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="checkinout.resx">
-      <DependentUpon>checkinout.cs</DependentUpon>
+    <EmbeddedResource Include="CheckInOut.resx">
+      <DependentUpon>CheckInOut.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="recordqry.resx">
-      <DependentUpon>recordqry.cs</DependentUpon>
+    <EmbeddedResource Include="RecordQry.resx">
+      <DependentUpon>RecordQry.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="index_admin.resx">
-      <DependentUpon>index_admin.cs</DependentUpon>
+    <EmbeddedResource Include="IndexAdmin.resx">
+      <DependentUpon>IndexAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,14 +130,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="signin.resx">
-      <DependentUpon>signin.cs</DependentUpon>
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="usermng.resx">
-      <DependentUpon>usermng.cs</DependentUpon>
+    <EmbeddedResource Include="UserMng.resx">
+      <DependentUpon>UserMng.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="userqry.resx">
-      <DependentUpon>userqry.cs</DependentUpon>
+    <EmbeddedResource Include="UserQry.resx">
+      <DependentUpon>UserQry.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

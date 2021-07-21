@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LAB001
 {
-    public partial class checkinout : Form
+    public partial class CheckInOut : Form
     {
-        public checkinout()
+        public CheckInOut()
         {
             InitializeComponent();
         }
@@ -23,6 +23,11 @@ namespace LAB001
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkinout_Load(object sender, EventArgs e)
         {
 
         }

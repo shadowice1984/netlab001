@@ -16,7 +16,7 @@ namespace LAB001
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new bookqry());
+            Application.Run(new BookQry());
         }
     }
 }

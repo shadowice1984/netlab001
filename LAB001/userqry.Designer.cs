@@ -1,6 +1,6 @@
 ﻿namespace LAB001
 {
-    partial class userqry
+    partial class UserQry
     {
         /// <summary>
         /// Required designer variable.

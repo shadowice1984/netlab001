@@ -1,6 +1,6 @@
 ﻿namespace LAB001
 {
-    partial class recordqry
+    partial class RecordQry
     {
         /// <summary>
         /// Required designer variable.

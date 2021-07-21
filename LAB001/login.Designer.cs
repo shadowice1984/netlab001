@@ -1,7 +1,7 @@
 ﻿
 namespace LAB001
 {
-    partial class login
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.

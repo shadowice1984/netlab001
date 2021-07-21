@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LAB001
 {
-    public partial class signin : Form
+    public partial class SignIn : Form
     {
-        public signin()
+        public SignIn()
         {
             InitializeComponent();
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace LAB001
 {
-    partial class index_admin
+    partial class IndexAdmin
     {
         /// <summary>
         /// Required designer variable.

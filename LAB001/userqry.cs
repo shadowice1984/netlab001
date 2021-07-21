@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LAB001
 {
-    public partial class userqry : Form
+    public partial class UserQry : Form
     {
-        public userqry()
+        public UserQry()
         {
             InitializeComponent();
         }

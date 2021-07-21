@@ -1,6 +1,6 @@
 ﻿namespace LAB001
 {
-    partial class bookmng
+    partial class BookMng
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace LAB001
 {
-    partial class checkinout
+    partial class CheckInOut
     {
         /// <summary>
         /// Required designer variable.
@@ -72,6 +72,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "checkinout";
             this.Text = "checkinout";
+            this.Load += new System.EventHandler(this.checkinout_Load);
             this.ResumeLayout(false);
 
         }
