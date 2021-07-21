@@ -30,7 +30,7 @@ namespace LAB001
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.checkinout = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -60,20 +60,23 @@ namespace LAB001
             this.pictureBox1.BackgroundImage = global::LAB001.Properties.Resources.pic1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(257, 80);
+            this.pictureBox1.Location = new System.Drawing.Point(605, 96);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(621, 439);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // checkinout
             // 
-            this.button1.Location = new System.Drawing.Point(149, 596);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.checkinout.Cursor = System.Windows.Forms.Cursors.Default;
+            this.checkinout.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.checkinout.Location = new System.Drawing.Point(39, 96);
+            this.checkinout.Name = "checkinout";
+            this.checkinout.Size = new System.Drawing.Size(179, 79);
+            this.checkinout.TabIndex = 2;
+            this.checkinout.Text = "书刊借还";
+            this.checkinout.UseVisualStyleBackColor = true;
+            this.checkinout.Click += new System.EventHandler(this.BookCheckInOut_OnClicked);
             // 
             // button2
             // 
@@ -240,7 +243,7 @@ namespace LAB001
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkinout);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -258,7 +261,7 @@ namespace LAB001
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button checkinout;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;

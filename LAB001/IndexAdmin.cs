@@ -28,11 +28,6 @@ namespace LAB001
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void 事务管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -41,6 +36,11 @@ namespace LAB001
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BookCheckInOut_OnClicked(object sender, EventArgs e)
+        {
+            checkinout checkinout_window = new checkinout;
         }
     }
 }
