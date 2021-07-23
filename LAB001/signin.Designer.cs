@@ -36,7 +36,7 @@ namespace LAB001
             this.name = new System.Windows.Forms.TextBox();
             this.number = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.adminChk = new System.Windows.Forms.CheckBox();
             this.Submit = new System.Windows.Forms.Button();
             this.passwordConfirm = new System.Windows.Forms.TextBox();
             this.numberLb = new System.Windows.Forms.Label();
@@ -102,16 +102,16 @@ namespace LAB001
             this.password.TabIndex = 7;
             this.password.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // checkBox1
+            // adminChk
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(659, 594);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(84, 16);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "申请管理员";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.adminChk.AutoSize = true;
+            this.adminChk.Location = new System.Drawing.Point(659, 594);
+            this.adminChk.Name = "adminChk";
+            this.adminChk.Size = new System.Drawing.Size(84, 16);
+            this.adminChk.TabIndex = 8;
+            this.adminChk.Text = "申请管理员";
+            this.adminChk.UseVisualStyleBackColor = true;
+            this.adminChk.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Submit
             // 
@@ -148,7 +148,7 @@ namespace LAB001
             this.Controls.Add(this.numberLb);
             this.Controls.Add(this.passwordConfirm);
             this.Controls.Add(this.Submit);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.adminChk);
             this.Controls.Add(this.password);
             this.Controls.Add(this.number);
             this.Controls.Add(this.name);
@@ -176,7 +176,7 @@ namespace LAB001
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.TextBox number;
         private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox adminChk;
         private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.TextBox passwordConfirm;
         private System.Windows.Forms.Label numberLb;

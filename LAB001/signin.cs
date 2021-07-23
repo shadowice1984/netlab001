@@ -16,7 +16,7 @@ namespace LAB001
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\shadowice1984\\Source\\Repos\\LAB001\\db.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\shadowice1984\Source\Repos\LAB001\db.mdf;Integrated Security=True;Connect Timeout=30");
         private void signin_Load(object sender, EventArgs e)
         {
 
@@ -78,8 +78,19 @@ namespace LAB001
                     return;
                 }
             }
+
+            string reg_date = DateTime.Now.ToShortDateString().ToString();
+            Console.WriteLine(reg_date);
             Con.Open();
-            string cmdStr = "";
+            string cmdStr;
+            if (adminChk.Checked == true)
+            {
+                cmdStr = "INSERT INTO [dbo].[UserTab] ([number], [name], [password], [regdate], [isadmin], [isbanned]) VALUES (N'"+number.Text+"', N'"+name.Text+"', N'"+password.Text+"', N'"+reg_date+"', 1, 0)";
+            }
+            else 
+            {
+                cmdStr = "INSERT INTO [dbo].[UserTab] ([number], [name], [password], [regdate], [isadmin], [isbanned]) VALUES (N'" + number.Text + "', N'" + name.Text + "', N'" + password.Text + "', N'" + reg_date + "', 0, 0)";
+            }
             SqlCommand cmd = new SqlCommand(cmdStr, Con);
             cmd.ExecuteNonQuery();
             Con.Close();
