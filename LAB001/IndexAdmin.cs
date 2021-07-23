@@ -74,7 +74,6 @@ namespace LAB001
 
         private void QryBtnEntered(object sender, EventArgs e)
         {
-            Console.WriteLine("!!!!");
             QryLayout.Visible = true;
             QryBtn.Visible = false;
         }
@@ -86,6 +85,24 @@ namespace LAB001
         }
 
         private void QryLayerLeave(object sender, EventArgs e)
+        {
+            QryLayout.Visible = false;
+            QryBtn.Visible = true;
+        }
+
+        private void BookQryBtnLeave(object sender, EventArgs e)
+        {
+            QryLayout.Visible = false;
+            QryBtn.Visible = true;
+        }
+
+        private void UserQryBtnLeave(object sender, EventArgs e)
+        {
+            QryLayout.Visible = false;
+            QryBtn.Visible = true;
+        }
+
+        private void RecordQryBtnLeave(object sender, EventArgs e)
         {
             QryLayout.Visible = false;
             QryBtn.Visible = true;

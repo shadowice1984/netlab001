@@ -237,16 +237,16 @@ namespace LAB001
             // QryLayout
             // 
             this.QryLayout.ColumnCount = 1;
-            this.QryLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.QryLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.QryLayout.Controls.Add(this.UserQryBtn, 0, 1);
             this.QryLayout.Controls.Add(this.RecordQryBtn, 0, 2);
             this.QryLayout.Controls.Add(this.BookQryBtn, 0, 0);
             this.QryLayout.Location = new System.Drawing.Point(761, 520);
             this.QryLayout.Name = "QryLayout";
             this.QryLayout.RowCount = 3;
-            this.QryLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.QryLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.QryLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.QryLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.QryLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.QryLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.QryLayout.Size = new System.Drawing.Size(191, 121);
             this.QryLayout.TabIndex = 5;
             this.QryLayout.Visible = false;
@@ -254,24 +254,35 @@ namespace LAB001
             // 
             // UserQryBtn
             // 
+            this.UserQryBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UserQryBtn.Location = new System.Drawing.Point(3, 43);
             this.UserQryBtn.Name = "UserQryBtn";
             this.UserQryBtn.Size = new System.Drawing.Size(185, 34);
             this.UserQryBtn.TabIndex = 1;
             this.UserQryBtn.Text = "用户查询";
             this.UserQryBtn.UseVisualStyleBackColor = true;
+            this.UserQryBtn.MouseLeave += new System.EventHandler(this.UserQryBtnLeave);
             // 
             // RecordQryBtn
             // 
+            this.RecordQryBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.RecordQryBtn.Location = new System.Drawing.Point(3, 83);
             this.RecordQryBtn.Name = "RecordQryBtn";
             this.RecordQryBtn.Size = new System.Drawing.Size(185, 35);
             this.RecordQryBtn.TabIndex = 2;
             this.RecordQryBtn.Text = "借还查询";
             this.RecordQryBtn.UseVisualStyleBackColor = true;
+            this.RecordQryBtn.MouseLeave += new System.EventHandler(this.RecordQryBtnLeave);
             // 
             // BookQryBtn
             // 
+            this.BookQryBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BookQryBtn.Location = new System.Drawing.Point(3, 3);
             this.BookQryBtn.Name = "BookQryBtn";
             this.BookQryBtn.Size = new System.Drawing.Size(185, 34);
@@ -279,6 +290,7 @@ namespace LAB001
             this.BookQryBtn.Text = "书刊查询";
             this.BookQryBtn.UseVisualStyleBackColor = true;
             this.BookQryBtn.Click += new System.EventHandler(this.BookQryOnClicked);
+            this.BookQryBtn.MouseLeave += new System.EventHandler(this.BookQryBtnLeave);
             // 
             // QryBtn
             // 
