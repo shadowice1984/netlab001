@@ -16,5 +16,26 @@ namespace LAB001
         {
             InitializeComponent();
         }
+        private IndexAdmin parent;
+        public UserMng(IndexAdmin _parent)
+        {
+            parent = _parent;
+            InitializeComponent();
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void UserMngClosing(object sender, FormClosingEventArgs e)
+        {
+            parent.Show();
+        }
+
+        private void UserMng_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

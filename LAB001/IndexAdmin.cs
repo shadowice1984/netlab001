@@ -67,7 +67,9 @@ namespace LAB001
 
         private void UserMngBtnOnClicked(object sender, EventArgs e)
         {
-
+            usermng_window = new UserMng(this);
+            usermng_window.Show();
+            this.Hide();
         }
 
         private void QryBtnEntered(object sender, EventArgs e)
