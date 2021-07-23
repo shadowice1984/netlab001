@@ -29,23 +29,24 @@ namespace LAB001
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.LoginSubmit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.UserName = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.GotoReginster = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // LoginSubmit
             // 
-            this.button1.Location = new System.Drawing.Point(119, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "提交";
-            this.button1.UseVisualStyleBackColor = true;
+            this.LoginSubmit.Location = new System.Drawing.Point(119, 203);
+            this.LoginSubmit.Name = "LoginSubmit";
+            this.LoginSubmit.Size = new System.Drawing.Size(75, 23);
+            this.LoginSubmit.TabIndex = 0;
+            this.LoginSubmit.Text = "提交";
+            this.LoginSubmit.UseVisualStyleBackColor = true;
+            this.LoginSubmit.Click += new System.EventHandler(this.LoginSubmit_Click);
             // 
             // label1
             // 
@@ -55,7 +56,6 @@ namespace LAB001
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 1;
             this.label1.Text = "用户名";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -66,53 +66,55 @@ namespace LAB001
             this.label2.TabIndex = 2;
             this.label2.Text = "密码";
             // 
-            // textBox1
+            // UserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(200, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 3;
+            this.UserName.Location = new System.Drawing.Point(200, 106);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(100, 21);
+            this.UserName.TabIndex = 3;
             // 
-            // textBox2
+            // Password
             // 
-            this.textBox2.Location = new System.Drawing.Point(200, 143);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
-            this.textBox2.TabIndex = 4;
+            this.Password.Location = new System.Drawing.Point(200, 143);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(100, 21);
+            this.Password.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(165, 44);
+            this.label3.Location = new System.Drawing.Point(198, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 5;
             this.label3.Text = "登录";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // button2
+            // GotoReginster
             // 
-            this.button2.Location = new System.Drawing.Point(234, 203);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "注册";
-            this.button2.UseVisualStyleBackColor = true;
+            this.GotoReginster.Location = new System.Drawing.Point(234, 203);
+            this.GotoReginster.Name = "GotoReginster";
+            this.GotoReginster.Size = new System.Drawing.Size(75, 23);
+            this.GotoReginster.TabIndex = 6;
+            this.GotoReginster.Text = "注册";
+            this.GotoReginster.UseVisualStyleBackColor = true;
+            this.GotoReginster.Click += new System.EventHandler(this.GotoReginster_Click);
             // 
-            // login
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 321);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.GotoReginster);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Password);
+            this.Controls.Add(this.UserName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Name = "login";
+            this.Controls.Add(this.LoginSubmit);
+            this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,12 +122,12 @@ namespace LAB001
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button LoginSubmit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox UserName;
+        private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button GotoReginster;
     }
 }

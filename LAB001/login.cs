@@ -17,14 +17,20 @@ namespace LAB001
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void GotoReginster_Click(object sender, EventArgs e)
         {
+            SignIn signin_window = new SignIn();
+            signin_window.ShowDialog();
+        }
 
+        private void LoginSubmit_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

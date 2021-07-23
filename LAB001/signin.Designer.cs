@@ -100,6 +100,7 @@ namespace LAB001
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(100, 21);
             this.password.TabIndex = 7;
+            this.password.UseSystemPasswordChar = true;
             this.password.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // adminChk
@@ -129,6 +130,7 @@ namespace LAB001
             this.passwordConfirm.Name = "passwordConfirm";
             this.passwordConfirm.Size = new System.Drawing.Size(100, 21);
             this.passwordConfirm.TabIndex = 11;
+            this.passwordConfirm.UseSystemPasswordChar = true;
             // 
             // numberLb
             // 
@@ -158,8 +160,7 @@ namespace LAB001
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SignIn";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.signin_Load);
             this.ResumeLayout(false);

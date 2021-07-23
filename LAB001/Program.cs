@@ -17,7 +17,7 @@ namespace LAB001
             Console.WriteLine();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignIn());
+            Application.Run(new Login());
         }
     }
 }
