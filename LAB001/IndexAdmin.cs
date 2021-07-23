@@ -12,7 +12,7 @@ namespace LAB001
 {
     public partial class IndexAdmin : Form
     {
-        private Login parent;
+        protected Login parent;
 
         public IndexAdmin()
         {

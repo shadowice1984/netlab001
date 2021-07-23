@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace LAB001
 {
     public partial class BookMng : Form
     {
-        public IndexAdmin parent;
+        protected IndexAdmin parent;
+        protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\lab\db.mdf;Integrated Security=True;Connect Timeout=30");
+        protected SqlDataAdapter dataadepter;
+        string sql_wholetab = "SELECT * FROM [dbo].[BookTab]";
 
         public BookMng()
         {
@@ -32,6 +36,19 @@ namespace LAB001
         private void BookMngClosing(object sender, FormClosingEventArgs e)
         {
             parent.Show();
+        }
+
+        private void BookMng_Load(object sender, EventArgs e)
+        {
+            dataadepter = new SqlDataAdapter(sql_wholetab, Con);
+            DataSet ds = new DataSet();
+            Con.Open();
+            dataadepter.Fill(ds, "Test_BookTable");
+            Con.Close();
+            DGVmain.DataSource = ds;
+            DGVmain.DataMember = "Test_BookTable";
+
+            MessageBox.Show("Data Loaded.", "Hint");
         }
     }
 }
