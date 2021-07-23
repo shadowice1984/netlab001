@@ -12,12 +12,19 @@ namespace LAB001
 {
     public partial class IndexAdmin : Form
     {
+        private Login parent;
+
         public IndexAdmin()
         {
             InitializeComponent();
 
         }
 
+        public IndexAdmin(Login _parent)
+        {
+            InitializeComponent();
+            parent = _parent;
+        }
 
         private void BookCheckInOutClicked(object sender, EventArgs e)
         {
@@ -107,5 +114,7 @@ namespace LAB001
             QryLayout.Visible = false;
             QryBtn.Visible = true;
         }
+
+        private void IndexAdminClosing(object sender, FormClosingEventArgs e) => parent.Close();
     }
 }

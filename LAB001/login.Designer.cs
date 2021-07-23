@@ -79,6 +79,7 @@ namespace LAB001
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(100, 21);
             this.Password.TabIndex = 4;
+            this.Password.UseSystemPasswordChar = true;
             // 
             // label3
             // 
