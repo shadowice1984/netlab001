@@ -16,7 +16,9 @@ namespace LAB001
         protected IndexAdmin parent;
         protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\lab\db.mdf;Integrated Security=True;Connect Timeout=30");
         protected SqlDataAdapter dataadepter;
+        protected SqlCommandBuilder cmdbuilder;
         string sql_wholetab = "SELECT * FROM [dbo].[BookTab]";
+        DataTable dt;
 
         public BookMng()
         {
@@ -41,14 +43,73 @@ namespace LAB001
         private void BookMng_Load(object sender, EventArgs e)
         {
             dataadepter = new SqlDataAdapter(sql_wholetab, Con);
-            DataSet ds = new DataSet();
+            cmdbuilder = new SqlCommandBuilder(dataadepter);
+            dt = new DataTable();
             Con.Open();
-            dataadepter.Fill(ds, "Test_BookTable");
+            dataadepter.Fill(dt);
             Con.Close();
-            DGVmain.DataSource = ds;
-            DGVmain.DataMember = "Test_BookTable";
+
+            bindingSource1.DataSource = dt;
+            DGVmain.DataSource = bindingSource1;
+            // DGVmain.DataMember = "Test_BookTable";
+            DGVmain.ReadOnly = true;
 
             MessageBox.Show("Data Loaded.", "Hint");
+            // DGVmain.ReadOnly = false;
+        }
+
+        private void IsModify_Click(object sender, EventArgs e)
+        {
+            
+            if (IsModify.Text.Equals("修改书刊数据"))
+            {
+                // Console.WriteLine("!!!");
+
+                DGVmain.ReadOnly = false;
+                IsModify.Text = "保存并退出修改";
+            }
+            else if (IsModify.Text.Equals("保存并退出修改")) 
+            {
+                // Console.WriteLine("123");
+
+                DGVmain.ReadOnly = true;
+                dataadepter.Update(bindingSource1.DataSource as DataTable);
+
+                IsModify.Text = "修改书刊数据";
+            }
+        }
+
+        private void UndoBtn_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("!!123");
+            dt.RejectChanges();
+            DGVmain.RefreshEdit();
+        }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataadepter.Update(bindingSource1.DataSource as DataTable);
+            }
+            catch
+            {
+                MessageBox.Show("保存失败：存在不符合格式的数据，或必填项未填写", "错误");
+            }
+        }
+
+        private void DelBtn_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow rows in DGVmain.SelectedRows)
+            {
+                DGVmain.Rows.RemoveAt(rows.Index);
+            }
+            DGVmain.RefreshEdit();
+        }
+
+        private void DGVDataErr(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show("错误：输入数据不符合格式，或必填项未填写", "错误");
         }
     }
 }

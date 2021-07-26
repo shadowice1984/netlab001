@@ -28,40 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.IsModify = new System.Windows.Forms.Button();
+            this.UndoBtn = new System.Windows.Forms.Button();
+            this.SaveBtn = new System.Windows.Forms.Button();
             this.BackBtn = new System.Windows.Forms.Button();
             this.DGVmain = new System.Windows.Forms.DataGridView();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.DelBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVmain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // IsModify
             // 
-            this.button1.Location = new System.Drawing.Point(993, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.IsModify.Location = new System.Drawing.Point(973, 122);
+            this.IsModify.Name = "IsModify";
+            this.IsModify.Size = new System.Drawing.Size(129, 51);
+            this.IsModify.TabIndex = 1;
+            this.IsModify.Text = "修改书刊数据";
+            this.IsModify.UseVisualStyleBackColor = true;
+            this.IsModify.Click += new System.EventHandler(this.IsModify_Click);
             // 
-            // button2
+            // UndoBtn
             // 
-            this.button2.Location = new System.Drawing.Point(993, 279);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.UndoBtn.Location = new System.Drawing.Point(973, 300);
+            this.UndoBtn.Name = "UndoBtn";
+            this.UndoBtn.Size = new System.Drawing.Size(129, 50);
+            this.UndoBtn.TabIndex = 2;
+            this.UndoBtn.Text = "撤销";
+            this.UndoBtn.UseVisualStyleBackColor = true;
+            this.UndoBtn.Click += new System.EventHandler(this.UndoBtn_Click);
             // 
-            // button3
+            // SaveBtn
             // 
-            this.button3.Location = new System.Drawing.Point(993, 403);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.SaveBtn.Location = new System.Drawing.Point(973, 210);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(129, 49);
+            this.SaveBtn.TabIndex = 3;
+            this.SaveBtn.Text = "保存";
+            this.SaveBtn.UseVisualStyleBackColor = true;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // BackBtn
             // 
@@ -79,20 +86,33 @@
             this.DGVmain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVmain.Location = new System.Drawing.Point(12, 12);
             this.DGVmain.Name = "DGVmain";
+            this.DGVmain.ReadOnly = true;
             this.DGVmain.RowTemplate.Height = 23;
             this.DGVmain.Size = new System.Drawing.Size(934, 658);
             this.DGVmain.TabIndex = 5;
+            this.DGVmain.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.DGVDataErr);
+            // 
+            // DelBtn
+            // 
+            this.DelBtn.Location = new System.Drawing.Point(973, 394);
+            this.DelBtn.Name = "DelBtn";
+            this.DelBtn.Size = new System.Drawing.Size(129, 47);
+            this.DelBtn.TabIndex = 6;
+            this.DelBtn.Text = "删除此行";
+            this.DelBtn.UseVisualStyleBackColor = true;
+            this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
             // 
             // BookMng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 682);
+            this.Controls.Add(this.DelBtn);
             this.Controls.Add(this.DGVmain);
             this.Controls.Add(this.BackBtn);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.SaveBtn);
+            this.Controls.Add(this.UndoBtn);
+            this.Controls.Add(this.IsModify);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "BookMng";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -100,15 +120,18 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BookMngClosing);
             this.Load += new System.EventHandler(this.BookMng_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVmain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button IsModify;
+        private System.Windows.Forms.Button UndoBtn;
+        private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.DataGridView DGVmain;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Button DelBtn;
     }
 }

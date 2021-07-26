@@ -17,7 +17,7 @@ namespace LAB001
         {
             InitializeComponent();
         }
-        
+
         protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\lab\db.mdf;Integrated Security=True;Connect Timeout=30");
         private IndexAdmin indexadmin_window;
 
@@ -55,16 +55,30 @@ namespace LAB001
                     Con.Close();
                     return;
                 }
+
+                indexadmin_window = new IndexAdmin(this);
+                indexadmin_window.Show();
+                this.Hide();
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
+                bool InvalidTableFlag = false;
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    if (ex.Errors[i].Number == 2706 || ex.Errors[i].Number == 2702)
+                        InvalidTableFlag = true;
+                }
+                if (InvalidTableFlag)
+                    MessageBox.Show("数据库或表格文件错误：不存在或已损坏。");
+                else
+                    MessageBox.Show("未处理的 SQL 异常：" + ex, "提示", MessageBoxButtons.OK);
                 Console.WriteLine(ex);
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("未辨明的异常：" + ex);
+            }
             Con.Close();
-
-            indexadmin_window = new IndexAdmin(this);
-            indexadmin_window.Show();
-            this.Hide();
         }
     }
 }
