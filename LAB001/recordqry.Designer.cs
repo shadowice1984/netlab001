@@ -31,7 +31,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AddRecFilter = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.AddRecFilter);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button1);
@@ -70,22 +70,25 @@
             this.panel1.Size = new System.Drawing.Size(1240, 78);
             this.panel1.TabIndex = 11;
             // 
-            // button2
+            // AddRecFilter
             // 
-            this.button2.Location = new System.Drawing.Point(582, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "添加筛选规则";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddRecFilter.Location = new System.Drawing.Point(582, 28);
+            this.AddRecFilter.Name = "AddRecFilter";
+            this.AddRecFilter.Size = new System.Drawing.Size(98, 23);
+            this.AddRecFilter.TabIndex = 4;
+            this.AddRecFilter.Text = "添加筛选规则";
+            this.AddRecFilter.UseVisualStyleBackColor = true;
+            this.AddRecFilter.Click += new System.EventHandler(this.AddRecFilter_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "abc",
-            "def",
-            "sss"});
+            "学生学号",
+            "图书ISBN码",
+            "事件日期",
+            "续借时长",
+            "事件类型"});
             this.comboBox1.Location = new System.Drawing.Point(3, 28);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(267, 20);
@@ -141,7 +144,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AddRecFilter;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;

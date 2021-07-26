@@ -31,10 +31,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AddFilter = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Reset = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -61,31 +61,33 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.AddFilter);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.Reset);
             this.panel1.Location = new System.Drawing.Point(11, 86);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1240, 78);
             this.panel1.TabIndex = 7;
             // 
-            // button2
+            // AddFilter
             // 
-            this.button2.Location = new System.Drawing.Point(582, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "添加筛选规则";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddFilter.Location = new System.Drawing.Point(582, 28);
+            this.AddFilter.Name = "AddFilter";
+            this.AddFilter.Size = new System.Drawing.Size(98, 23);
+            this.AddFilter.TabIndex = 4;
+            this.AddFilter.Text = "添加筛选规则";
+            this.AddFilter.UseVisualStyleBackColor = true;
+            this.AddFilter.Click += new System.EventHandler(this.AddFilter_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "abc",
-            "def",
-            "sss"});
+            "学号",
+            "姓名",
+            "注册日期",
+            "是否为管理员"});
             this.comboBox1.Location = new System.Drawing.Point(3, 28);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(267, 20);
@@ -98,14 +100,15 @@
             this.textBox1.Size = new System.Drawing.Size(269, 21);
             this.textBox1.TabIndex = 2;
             // 
-            // button1
+            // Reset
             // 
-            this.button1.Location = new System.Drawing.Point(695, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "重置筛选规则";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Reset.Location = new System.Drawing.Point(695, 28);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(95, 23);
+            this.Reset.TabIndex = 1;
+            this.Reset.Text = "重置筛选规则";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // dataGridView1
             // 
@@ -141,10 +144,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AddFilter;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Reset;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -31,7 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AddBookFilter = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.AddBookFilter);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button1);
@@ -69,14 +69,15 @@
             this.panel1.Size = new System.Drawing.Size(1240, 78);
             this.panel1.TabIndex = 3;
             // 
-            // button2
+            // AddBookFilter
             // 
-            this.button2.Location = new System.Drawing.Point(582, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "添加筛选规则";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddBookFilter.Location = new System.Drawing.Point(582, 28);
+            this.AddBookFilter.Name = "AddBookFilter";
+            this.AddBookFilter.Size = new System.Drawing.Size(98, 23);
+            this.AddBookFilter.TabIndex = 4;
+            this.AddBookFilter.Text = "添加筛选规则";
+            this.AddBookFilter.UseVisualStyleBackColor = true;
+            this.AddBookFilter.Click += new System.EventHandler(this.AddBookFilter_Click);
             // 
             // comboBox1
             // 
@@ -147,7 +148,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AddBookFilter;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

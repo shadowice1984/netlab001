@@ -14,7 +14,7 @@ namespace LAB001
     public partial class BookMng : Form
     {
         protected IndexAdmin parent;
-        protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\lab\db.mdf;Integrated Security=True;Connect Timeout=30");
+        protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\shadowice1984\Documents\newdb.mdf;Integrated Security=True;Connect Timeout=30");
         protected SqlDataAdapter dataadepter;
         string sql_wholetab = "SELECT * FROM [dbo].[BookTab]";
 
