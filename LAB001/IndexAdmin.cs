@@ -44,6 +44,9 @@ namespace LAB001
         private CheckInOut checkinout_window;
         private BookMng bookmng_window;
         private UserMng usermng_window;
+        private BookQry bookqry_window;
+        private UserQry userqry_window;
+        private RecordQry recordqry_window;
         //private 
 
 
@@ -87,8 +90,12 @@ namespace LAB001
 
         private void BookQryOnClicked(object sender, EventArgs e)
         {
-            QryLayout.Visible = false;
-            QryBtn.Visible = true;
+            
+            bookqry_window = new BookQry(this);
+            bookqry_window.Show();
+            QryLayout.Visible = true;
+            QryBtn.Visible = false;
+            this.Hide();
         }
 
         private void QryLayerLeave(object sender, EventArgs e)
@@ -116,5 +123,23 @@ namespace LAB001
         }
 
         private void IndexAdminClosing(object sender, FormClosingEventArgs e) => parent.Close();
+
+        private void UserQryBtn_Click(object sender, EventArgs e)
+        {
+            userqry_window = new UserQry(this);
+            userqry_window.Show();
+            QryLayout.Visible = true;
+            QryBtn.Visible = false;
+            this.Hide();
+        }
+
+        private void RecordQryBtn_Click(object sender, EventArgs e)
+        {
+            recordqry_window = new RecordQry(this);
+            recordqry_window.Show();
+            QryLayout.Visible = true;
+            QryBtn.Visible = false;
+            this.Hide();
+        }
     }
 }

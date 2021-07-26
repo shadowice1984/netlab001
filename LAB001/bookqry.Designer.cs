@@ -83,9 +83,15 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "abc",
-            "def",
-            "sss"});
+            "ISBN码",
+            "书名",
+            "作者",
+            "其他作者",
+            "图书代码",
+            "出版社",
+            "出版日期",
+            "数目",
+            "在馆数目"});
             this.comboBox1.Location = new System.Drawing.Point(3, 28);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(267, 20);
@@ -98,7 +104,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1240, 55);
             this.label1.TabIndex = 4;
-            this.label1.Text = "qwq";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2

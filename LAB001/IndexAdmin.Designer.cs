@@ -116,6 +116,7 @@ namespace LAB001
             this.UserQryBtn.TabIndex = 1;
             this.UserQryBtn.Text = "用户查询";
             this.UserQryBtn.UseVisualStyleBackColor = true;
+            this.UserQryBtn.Click += new System.EventHandler(this.UserQryBtn_Click);
             this.UserQryBtn.MouseLeave += new System.EventHandler(this.UserQryBtnLeave);
             // 
             // RecordQryBtn
@@ -129,6 +130,7 @@ namespace LAB001
             this.RecordQryBtn.TabIndex = 2;
             this.RecordQryBtn.Text = "借还查询";
             this.RecordQryBtn.UseVisualStyleBackColor = true;
+            this.RecordQryBtn.Click += new System.EventHandler(this.RecordQryBtn_Click);
             this.RecordQryBtn.MouseLeave += new System.EventHandler(this.RecordQryBtnLeave);
             // 
             // BookQryBtn
