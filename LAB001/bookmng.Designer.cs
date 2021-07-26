@@ -52,6 +52,7 @@
             // 
             // UndoBtn
             // 
+            this.UndoBtn.Enabled = false;
             this.UndoBtn.Location = new System.Drawing.Point(973, 300);
             this.UndoBtn.Name = "UndoBtn";
             this.UndoBtn.Size = new System.Drawing.Size(129, 50);
@@ -62,6 +63,7 @@
             // 
             // SaveBtn
             // 
+            this.SaveBtn.Enabled = false;
             this.SaveBtn.Location = new System.Drawing.Point(973, 210);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(129, 49);
@@ -94,6 +96,7 @@
             // 
             // DelBtn
             // 
+            this.DelBtn.Enabled = false;
             this.DelBtn.Location = new System.Drawing.Point(973, 394);
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(129, 47);

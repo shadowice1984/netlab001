@@ -14,7 +14,7 @@ namespace LAB001
     public partial class BookMng : Form
     {
         protected IndexAdmin parent;
-        protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\shadowice1984\Documents\newdb.mdf;Integrated Security=True;Connect Timeout=30");
+        protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\lab\db.mdf;Integrated Security=True;Connect Timeout=30");
         protected SqlDataAdapter dataadepter;
         protected SqlCommandBuilder cmdbuilder;
         string sql_wholetab = "SELECT * FROM [dbo].[BookTab]";
@@ -66,6 +66,9 @@ namespace LAB001
                 // Console.WriteLine("!!!");
 
                 DGVmain.ReadOnly = false;
+                UndoBtn.Enabled = true;
+                SaveBtn.Enabled = true;
+                DelBtn.Enabled = true;
                 IsModify.Text = "保存并退出修改";
             }
             else if (IsModify.Text.Equals("保存并退出修改")) 
@@ -73,6 +76,9 @@ namespace LAB001
                 // Console.WriteLine("123");
 
                 DGVmain.ReadOnly = true;
+                UndoBtn.Enabled = false;
+                SaveBtn.Enabled = false;
+                DelBtn.Enabled = false;
                 dataadepter.Update(bindingSource1.DataSource as DataTable);
 
                 IsModify.Text = "修改书刊数据";
@@ -100,6 +106,11 @@ namespace LAB001
 
         private void DelBtn_Click(object sender, EventArgs e)
         {
+            if (DGVmain.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请在左侧选中一行!", "提示");
+                return;
+            }
             foreach (DataGridViewRow rows in DGVmain.SelectedRows)
             {
                 DGVmain.Rows.RemoveAt(rows.Index);

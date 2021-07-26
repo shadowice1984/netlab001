@@ -35,9 +35,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGVmain = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVmain)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -81,6 +81,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "ISBN码",
@@ -117,21 +118,21 @@
             this.label2.Text = "查询结果";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // dataGridView1
+            // DGVmain
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 202);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1240, 468);
-            this.dataGridView1.TabIndex = 6;
+            this.DGVmain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVmain.Location = new System.Drawing.Point(12, 202);
+            this.DGVmain.Name = "DGVmain";
+            this.DGVmain.RowTemplate.Height = 23;
+            this.DGVmain.Size = new System.Drawing.Size(1240, 468);
+            this.DGVmain.TabIndex = 6;
             // 
             // BookQry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 682);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGVmain);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -140,7 +141,7 @@
             this.Load += new System.EventHandler(this.bookqry_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVmain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,6 +155,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button AddBookFilter;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGVmain;
     }
 }

@@ -111,7 +111,12 @@ namespace LAB001
                 { MessageBox.Show("其他作者姓名过长"); return; }
                 label1.Text += "其他作者=" + textBox1.Text + ";";
             }
-
+            else if (String.Equals(comboBox1.Text, "图书代码"))
+            {
+                if (textBox1.Text.Length > 20)
+                { MessageBox.Show("其他作者姓名过长"); return; }
+                label1.Text += "其他作者=" + textBox1.Text + ";";
+            }
         }
     }
 }
