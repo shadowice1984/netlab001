@@ -16,5 +16,62 @@ namespace LAB001
         {
             InitializeComponent();
         }
+        IndexAdmin parent;
+        public RecordQry(IndexAdmin _parent)
+        {
+            parent = _parent;
+            InitializeComponent();
+
+
+        }
+        private void AddRecFilter_Click(object sender, EventArgs e)
+        {
+            string qryStr;
+            if (String.Equals(comboBox1.Text, "学生学号"))
+            {
+                if (textBox1.Text.Length > 15)
+                { MessageBox.Show("学号过长"); return; }
+                label1.Text += "学号=" + textBox1.Text + ";";
+
+            }
+            else if (String.Equals(comboBox1.Text, "图书ISBN码"))
+            {
+                if (textBox1.Text.Length > 20)
+                { MessageBox.Show("ISBN过长"); return; }
+                label1.Text += "ISBN=" + textBox1.Text + ";";
+            }
+            else if (String.Equals(comboBox1.Text, "事件日期"))
+            {
+                DateTime dtTime;
+                if (DateTime.TryParse(textBox1.Text, out dtTime))
+                {
+                    label1.Text += "日期=" + textBox1.Text + ";";
+                }
+                else
+                {
+                    MessageBox.Show("请输入合法日期"); return;
+                }
+            }
+            else if (String.Equals(comboBox1.Text, "事件类型"))
+            {
+                if (String.Equals(textBox1.Text, "借书"))
+                {
+                    label1.Text += "事件类型=" + textBox1.Text + ";";
+                }
+                else if (String.Equals(textBox1.Text, "还书"))
+                {
+                    label1.Text += "事件类型=" + textBox1.Text + ";";
+                }
+                else if (String.Equals(textBox1.Text, "续借"))
+                {
+                    label1.Text += "事件类型=" + textBox1.Text + ";";
+                }
+                else
+                {
+                    MessageBox.Show("事件类型必须为“借书”，“还书”，“续借”三者之一");
+                    return;
+                }
+            }
+        }
     }
 }

@@ -31,7 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AddBookFilter = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.AddBookFilter);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button1);
@@ -69,22 +69,29 @@
             this.panel1.Size = new System.Drawing.Size(1240, 78);
             this.panel1.TabIndex = 3;
             // 
-            // button2
+            // AddBookFilter
             // 
-            this.button2.Location = new System.Drawing.Point(582, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "添加筛选规则";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddBookFilter.Location = new System.Drawing.Point(582, 28);
+            this.AddBookFilter.Name = "AddBookFilter";
+            this.AddBookFilter.Size = new System.Drawing.Size(98, 23);
+            this.AddBookFilter.TabIndex = 4;
+            this.AddBookFilter.Text = "添加筛选规则";
+            this.AddBookFilter.UseVisualStyleBackColor = true;
+            this.AddBookFilter.Click += new System.EventHandler(this.AddBookFilter_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "abc",
-            "def",
-            "sss"});
+            "ISBN码",
+            "书名",
+            "作者",
+            "其他作者",
+            "图书代码",
+            "出版社",
+            "出版日期",
+            "数目",
+            "在馆数目"});
             this.comboBox1.Location = new System.Drawing.Point(3, 28);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(267, 20);
@@ -97,7 +104,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1240, 55);
             this.label1.TabIndex = 4;
-            this.label1.Text = "qwq";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -147,7 +153,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AddBookFilter;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
