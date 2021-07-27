@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.ResetBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BackBtn = new System.Windows.Forms.Button();
@@ -37,19 +38,21 @@
             this.PreviewLabel = new System.Windows.Forms.Label();
             this.ResultLabel = new System.Windows.Forms.Label();
             this.DGVmain = new System.Windows.Forms.DataGridView();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVmain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // ResetBtn
             // 
-            this.button1.Location = new System.Drawing.Point(695, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "重置筛选规则";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ResetBtn.Location = new System.Drawing.Point(695, 28);
+            this.ResetBtn.Name = "ResetBtn";
+            this.ResetBtn.Size = new System.Drawing.Size(95, 23);
+            this.ResetBtn.TabIndex = 1;
+            this.ResetBtn.Text = "重置筛选规则";
+            this.ResetBtn.UseVisualStyleBackColor = true;
+            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
             // 
             // textBox1
             // 
@@ -65,7 +68,7 @@
             this.panel1.Controls.Add(this.AddBookFilter);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.ResetBtn);
             this.panel1.Location = new System.Drawing.Point(12, 79);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1240, 78);
@@ -154,13 +157,14 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVmain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ResetBtn;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -169,5 +173,6 @@
         private System.Windows.Forms.Button AddBookFilter;
         private System.Windows.Forms.DataGridView DGVmain;
         private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
