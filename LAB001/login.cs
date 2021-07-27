@@ -18,12 +18,13 @@ namespace LAB001
             InitializeComponent();
         }
 
-        protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\lab\db.mdf;Integrated Security=True;Connect Timeout=30");
+        // protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\lab\db.mdf;Integrated Security=True;Connect Timeout=30");
+        protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\db.mdf';Integrated Security=True;Connect Timeout=30");
         private IndexAdmin indexadmin_window;
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            // Console.WriteLine("|DataDirectory|");
         }
 
         private void GotoReginster_Click(object sender, EventArgs e)
