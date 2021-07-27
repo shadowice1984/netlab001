@@ -26,21 +26,6 @@ namespace LAB001
             parent = _parent;
         }
 
-        private void BookCheckInOutClicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void userindex_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void 事务管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private CheckInOut checkinout_window;
         private BookMng bookmng_window;
         private UserMng usermng_window;
@@ -59,17 +44,6 @@ namespace LAB001
 
         private void CheckInOutBtnOnClicked(object sender, EventArgs e)
         {
-            /*Console.WriteLine(checkinout_window);
-            if (checkinout_window == null)
-            {
-                Console.WriteLine("Clicked");
-                //checkinout_window.
-            }
-            else
-            {
-                checkinout_window.Show();
-            }*/
-
             checkinout_window = new CheckInOut(this);
             checkinout_window.Show();
             this.Hide();
@@ -140,6 +114,11 @@ namespace LAB001
             QryLayout.Visible = true;
             QryBtn.Visible = false;
             this.Hide();
+        }
+
+        private void QuitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

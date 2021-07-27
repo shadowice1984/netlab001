@@ -38,6 +38,7 @@ namespace LAB001
             this.RecordQryBtn = new System.Windows.Forms.Button();
             this.BookQryBtn = new System.Windows.Forms.Button();
             this.QryBtn = new System.Windows.Forms.Button();
+            this.QuitBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.QryLayout.SuspendLayout();
             this.SuspendLayout();
@@ -157,11 +158,23 @@ namespace LAB001
             this.QryBtn.UseVisualStyleBackColor = true;
             this.QryBtn.MouseEnter += new System.EventHandler(this.QryBtnEntered);
             // 
+            // QuitBtn
+            // 
+            this.QuitBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.QuitBtn.Location = new System.Drawing.Point(1167, 591);
+            this.QuitBtn.Name = "QuitBtn";
+            this.QuitBtn.Size = new System.Drawing.Size(80, 80);
+            this.QuitBtn.TabIndex = 7;
+            this.QuitBtn.Text = "退出";
+            this.QuitBtn.UseVisualStyleBackColor = true;
+            this.QuitBtn.Click += new System.EventHandler(this.QuitBtn_Click);
+            // 
             // IndexAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 682);
+            this.Controls.Add(this.QuitBtn);
             this.Controls.Add(this.QryBtn);
             this.Controls.Add(this.QryLayout);
             this.Controls.Add(this.UserMngBtn);
@@ -190,5 +203,6 @@ namespace LAB001
         private System.Windows.Forms.Button UserQryBtn;
         private System.Windows.Forms.Button RecordQryBtn;
         private System.Windows.Forms.Button QryBtn;
+        private System.Windows.Forms.Button QuitBtn;
     }
 }

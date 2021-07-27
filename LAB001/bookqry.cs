@@ -28,13 +28,6 @@ namespace LAB001
         {
             parent = _parent;
             InitializeComponent();
-
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void UpdateDGV(string QryStr)
