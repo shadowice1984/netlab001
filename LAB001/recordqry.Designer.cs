@@ -145,6 +145,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RecordQry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "借还记录查询";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RecordQryClosing);
             this.Load += new System.EventHandler(this.RecordQry_Load);
