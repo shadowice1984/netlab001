@@ -54,7 +54,7 @@ namespace LAB001
             // DGVmain.DataMember = "Test_BookTable";
             DGVmain.ReadOnly = true;
 
-            MessageBox.Show("Data Loaded.", "Hint");
+            Console.WriteLine("Book Data Loaded.");
             // DGVmain.ReadOnly = false;
         }
 

@@ -42,7 +42,7 @@
             // 
             // IsModify
             // 
-            this.IsModify.Location = new System.Drawing.Point(973, 122);
+            this.IsModify.Location = new System.Drawing.Point(1063, 126);
             this.IsModify.Name = "IsModify";
             this.IsModify.Size = new System.Drawing.Size(129, 51);
             this.IsModify.TabIndex = 1;
@@ -53,7 +53,7 @@
             // UndoBtn
             // 
             this.UndoBtn.Enabled = false;
-            this.UndoBtn.Location = new System.Drawing.Point(973, 300);
+            this.UndoBtn.Location = new System.Drawing.Point(1063, 304);
             this.UndoBtn.Name = "UndoBtn";
             this.UndoBtn.Size = new System.Drawing.Size(129, 50);
             this.UndoBtn.TabIndex = 2;
@@ -64,7 +64,7 @@
             // SaveBtn
             // 
             this.SaveBtn.Enabled = false;
-            this.SaveBtn.Location = new System.Drawing.Point(973, 210);
+            this.SaveBtn.Location = new System.Drawing.Point(1063, 214);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(129, 49);
             this.SaveBtn.TabIndex = 3;
@@ -90,14 +90,14 @@
             this.DGVmain.Name = "DGVmain";
             this.DGVmain.ReadOnly = true;
             this.DGVmain.RowTemplate.Height = 23;
-            this.DGVmain.Size = new System.Drawing.Size(934, 658);
+            this.DGVmain.Size = new System.Drawing.Size(980, 658);
             this.DGVmain.TabIndex = 5;
             this.DGVmain.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.DGVDataErr);
             // 
             // DelBtn
             // 
             this.DelBtn.Enabled = false;
-            this.DelBtn.Location = new System.Drawing.Point(973, 394);
+            this.DelBtn.Location = new System.Drawing.Point(1063, 398);
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(129, 47);
             this.DelBtn.TabIndex = 6;

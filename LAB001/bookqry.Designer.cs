@@ -31,10 +31,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.AddBookFilter = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.PreviewLabel = new System.Windows.Forms.Label();
+            this.ResultLabel = new System.Windows.Forms.Label();
             this.DGVmain = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVmain)).BeginInit();
@@ -60,6 +61,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BackBtn);
             this.panel1.Controls.Add(this.AddBookFilter);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox1);
@@ -68,6 +70,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1240, 78);
             this.panel1.TabIndex = 3;
+            // 
+            // BackBtn
+            // 
+            this.BackBtn.Location = new System.Drawing.Point(1099, 11);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(138, 57);
+            this.BackBtn.TabIndex = 5;
+            this.BackBtn.Text = "返回主界面";
+            this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // AddBookFilter
             // 
@@ -98,25 +110,23 @@
             this.comboBox1.Size = new System.Drawing.Size(267, 20);
             this.comboBox1.TabIndex = 3;
             // 
-            // label1
+            // PreviewLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1240, 55);
-            this.label1.TabIndex = 4;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.PreviewLabel.BackColor = System.Drawing.Color.White;
+            this.PreviewLabel.Location = new System.Drawing.Point(12, 9);
+            this.PreviewLabel.Name = "PreviewLabel";
+            this.PreviewLabel.Size = new System.Drawing.Size(1240, 55);
+            this.PreviewLabel.TabIndex = 4;
             // 
-            // label2
+            // ResultLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(605, 169);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 21);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "查询结果";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ResultLabel.Location = new System.Drawing.Point(605, 169);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(74, 21);
+            this.ResultLabel.TabIndex = 5;
+            this.ResultLabel.Text = "查询结果";
             // 
             // DGVmain
             // 
@@ -133,12 +143,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 682);
             this.Controls.Add(this.DGVmain);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ResultLabel);
+            this.Controls.Add(this.PreviewLabel);
             this.Controls.Add(this.panel1);
             this.Name = "BookQry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "bookqry";
-            this.Load += new System.EventHandler(this.bookqry_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BookQryClosing);
+            this.Load += new System.EventHandler(this.BookQryLoad);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVmain)).EndInit();
@@ -152,9 +164,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label PreviewLabel;
+        private System.Windows.Forms.Label ResultLabel;
         private System.Windows.Forms.Button AddBookFilter;
         private System.Windows.Forms.DataGridView DGVmain;
+        private System.Windows.Forms.Button BackBtn;
     }
 }

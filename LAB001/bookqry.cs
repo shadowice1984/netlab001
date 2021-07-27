@@ -24,10 +24,6 @@ namespace LAB001
 
 
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -39,21 +35,6 @@ namespace LAB001
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bookqry_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddBookFilter_Click(object sender, EventArgs e)
         {
             string qryStr;
@@ -61,7 +42,7 @@ namespace LAB001
             {
                 if (textBox1.Text.Length > 25)
                 { MessageBox.Show("ISBN码过长"); return; }
-                label1.Text += "ISBN="+textBox1.Text+";";
+                PreviewLabel.Text += "ISBN="+textBox1.Text+";";
                 //Console.WriteLine(label1.Text);
 
             }
@@ -69,7 +50,7 @@ namespace LAB001
             {
                 if (textBox1.Text.Length > 50)
                 { MessageBox.Show("书名过长"); return; }
-                label1.Text += "书名=" + textBox1.Text + ";";
+                PreviewLabel.Text += "书名=" + textBox1.Text + ";";
 
             }
             else if (String.Equals(comboBox1.Text, "出版日期"))
@@ -77,7 +58,7 @@ namespace LAB001
                 DateTime dtTime;
                 if (DateTime.TryParse(textBox1.Text, out dtTime))
                 {
-                    label1.Text += "日期=" + textBox1.Text + ";";
+                    PreviewLabel.Text += "日期=" + textBox1.Text + ";";
                 }
                 else
                 {
@@ -88,35 +69,50 @@ namespace LAB001
             {
                 if (textBox1.Text.Length > 15)
                 { MessageBox.Show("出版社名过长"); return; }
-                label1.Text += "出版社=" + textBox1.Text + ";";
+                PreviewLabel.Text += "出版社=" + textBox1.Text + ";";
             }
             else if (String.Equals(comboBox1.Text, "在馆数目"))
             {
-                label1.Text += "在馆数目=" + textBox1.Text + ";";
+                PreviewLabel.Text += "在馆数目=" + textBox1.Text + ";";
 
             }
             else if (String.Equals(comboBox1.Text, "数目"))
             {
-                label1.Text += "数目=" + textBox1.Text + ";";
+                PreviewLabel.Text += "数目=" + textBox1.Text + ";";
             }
             else if (String.Equals(comboBox1.Text, "作者"))
             {
                 if (textBox1.Text.Length > 25)
                 { MessageBox.Show("作者姓名过长"); return; }
-                label1.Text += "作者=" + textBox1.Text + ";";
+                PreviewLabel.Text += "作者=" + textBox1.Text + ";";
             }
             else if (String.Equals(comboBox1.Text, "其他作者"))
             {
                 if (textBox1.Text.Length > 50)
                 { MessageBox.Show("其他作者姓名过长"); return; }
-                label1.Text += "其他作者=" + textBox1.Text + ";";
+                PreviewLabel.Text += "其他作者=" + textBox1.Text + ";";
             }
             else if (String.Equals(comboBox1.Text, "图书代码"))
             {
                 if (textBox1.Text.Length > 20)
                 { MessageBox.Show("其他作者姓名过长"); return; }
-                label1.Text += "其他作者=" + textBox1.Text + ";";
+                PreviewLabel.Text += "其他作者=" + textBox1.Text + ";";
             }
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BookQryClosing(object sender, FormClosingEventArgs e)
+        {
+            parent.Show();
+        }
+
+        private void BookQryLoad(object sender, EventArgs e)
+        {
+
         }
     }
 }
