@@ -118,7 +118,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UserMng";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "usermng";
+            this.Text = "用户管理";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserMngClosing);
             this.Load += new System.EventHandler(this.UserMng_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();

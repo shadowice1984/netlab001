@@ -48,7 +48,7 @@ namespace LAB001
             this.label1.Location = new System.Drawing.Point(568, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 100;
             this.label1.Text = "注册";
             // 
             // nameLb
@@ -57,7 +57,7 @@ namespace LAB001
             this.nameLb.Location = new System.Drawing.Point(206, 129);
             this.nameLb.Name = "nameLb";
             this.nameLb.Size = new System.Drawing.Size(53, 12);
-            this.nameLb.TabIndex = 2;
+            this.nameLb.TabIndex = 101;
             this.nameLb.Text = "真实姓名";
             // 
             // passwordLb
@@ -66,7 +66,7 @@ namespace LAB001
             this.passwordLb.Location = new System.Drawing.Point(206, 260);
             this.passwordLb.Name = "passwordLb";
             this.passwordLb.Size = new System.Drawing.Size(29, 12);
-            this.passwordLb.TabIndex = 3;
+            this.passwordLb.TabIndex = 103;
             this.passwordLb.Text = "密码";
             this.passwordLb.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -76,7 +76,7 @@ namespace LAB001
             this.passwordConfirmLb.Location = new System.Drawing.Point(206, 330);
             this.passwordConfirmLb.Name = "passwordConfirmLb";
             this.passwordConfirmLb.Size = new System.Drawing.Size(53, 12);
-            this.passwordConfirmLb.TabIndex = 4;
+            this.passwordConfirmLb.TabIndex = 104;
             this.passwordConfirmLb.Text = "确认密码";
             this.passwordConfirmLb.Click += new System.EventHandler(this.label4_Click);
             // 
@@ -85,21 +85,21 @@ namespace LAB001
             this.name.Location = new System.Drawing.Point(808, 126);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(100, 21);
-            this.name.TabIndex = 5;
+            this.name.TabIndex = 1;
             // 
             // number
             // 
             this.number.Location = new System.Drawing.Point(808, 191);
             this.number.Name = "number";
             this.number.Size = new System.Drawing.Size(100, 21);
-            this.number.TabIndex = 6;
+            this.number.TabIndex = 2;
             // 
             // password
             // 
             this.password.Location = new System.Drawing.Point(808, 257);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(100, 21);
-            this.password.TabIndex = 7;
+            this.password.TabIndex = 3;
             this.password.UseSystemPasswordChar = true;
             this.password.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -109,7 +109,7 @@ namespace LAB001
             this.adminChk.Location = new System.Drawing.Point(659, 594);
             this.adminChk.Name = "adminChk";
             this.adminChk.Size = new System.Drawing.Size(84, 16);
-            this.adminChk.TabIndex = 8;
+            this.adminChk.TabIndex = 5;
             this.adminChk.Text = "申请管理员";
             this.adminChk.UseVisualStyleBackColor = true;
             this.adminChk.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -119,7 +119,7 @@ namespace LAB001
             this.Submit.Location = new System.Drawing.Point(511, 590);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(75, 23);
-            this.Submit.TabIndex = 10;
+            this.Submit.TabIndex = 6;
             this.Submit.Text = "注册";
             this.Submit.UseVisualStyleBackColor = true;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
@@ -129,7 +129,7 @@ namespace LAB001
             this.passwordConfirm.Location = new System.Drawing.Point(808, 327);
             this.passwordConfirm.Name = "passwordConfirm";
             this.passwordConfirm.Size = new System.Drawing.Size(100, 21);
-            this.passwordConfirm.TabIndex = 11;
+            this.passwordConfirm.TabIndex = 4;
             this.passwordConfirm.UseSystemPasswordChar = true;
             // 
             // numberLb
@@ -138,7 +138,7 @@ namespace LAB001
             this.numberLb.Location = new System.Drawing.Point(206, 194);
             this.numberLb.Name = "numberLb";
             this.numberLb.Size = new System.Drawing.Size(47, 12);
-            this.numberLb.TabIndex = 12;
+            this.numberLb.TabIndex = 102;
             this.numberLb.Text = "学/工号";
             this.numberLb.Click += new System.EventHandler(this.label5_Click);
             // 
@@ -161,7 +161,7 @@ namespace LAB001
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "注册";
             this.Load += new System.EventHandler(this.signin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

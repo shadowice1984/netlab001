@@ -90,7 +90,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CheckInOut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CheckInOut";
+            this.Text = "书刊借还管理";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CheckInOutClosing);
             this.Load += new System.EventHandler(this.CheckInOut_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVmain)).EndInit();

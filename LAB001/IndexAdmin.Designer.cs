@@ -185,7 +185,7 @@ namespace LAB001
             this.Name = "IndexAdmin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "主页";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IndexAdminClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.QryLayout.ResumeLayout(false);

@@ -119,7 +119,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "BookMng";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "bookmng";
+            this.Text = "书刊管理";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BookMngClosing);
             this.Load += new System.EventHandler(this.BookMng_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVmain)).EndInit();

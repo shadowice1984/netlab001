@@ -43,7 +43,7 @@ namespace LAB001
             this.LoginSubmit.Location = new System.Drawing.Point(119, 203);
             this.LoginSubmit.Name = "LoginSubmit";
             this.LoginSubmit.Size = new System.Drawing.Size(75, 23);
-            this.LoginSubmit.TabIndex = 0;
+            this.LoginSubmit.TabIndex = 3;
             this.LoginSubmit.Text = "提交";
             this.LoginSubmit.UseVisualStyleBackColor = true;
             this.LoginSubmit.Click += new System.EventHandler(this.LoginSubmit_Click);
@@ -54,7 +54,7 @@ namespace LAB001
             this.label1.Location = new System.Drawing.Point(76, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 101;
             this.label1.Text = "用户名";
             // 
             // label2
@@ -63,7 +63,7 @@ namespace LAB001
             this.label2.Location = new System.Drawing.Point(76, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 102;
             this.label2.Text = "密码";
             // 
             // UserName
@@ -71,14 +71,14 @@ namespace LAB001
             this.UserName.Location = new System.Drawing.Point(200, 106);
             this.UserName.Name = "UserName";
             this.UserName.Size = new System.Drawing.Size(100, 21);
-            this.UserName.TabIndex = 3;
+            this.UserName.TabIndex = 1;
             // 
             // Password
             // 
             this.Password.Location = new System.Drawing.Point(200, 143);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(100, 21);
-            this.Password.TabIndex = 4;
+            this.Password.TabIndex = 2;
             this.Password.UseSystemPasswordChar = true;
             // 
             // label3
@@ -87,7 +87,7 @@ namespace LAB001
             this.label3.Location = new System.Drawing.Point(198, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 12);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 100;
             this.label3.Text = "登录";
             // 
             // GotoReginster
@@ -95,7 +95,7 @@ namespace LAB001
             this.GotoReginster.Location = new System.Drawing.Point(234, 203);
             this.GotoReginster.Name = "GotoReginster";
             this.GotoReginster.Size = new System.Drawing.Size(75, 23);
-            this.GotoReginster.TabIndex = 6;
+            this.GotoReginster.TabIndex = 4;
             this.GotoReginster.Text = "注册";
             this.GotoReginster.UseVisualStyleBackColor = true;
             this.GotoReginster.Click += new System.EventHandler(this.GotoReginster_Click);
@@ -114,7 +114,7 @@ namespace LAB001
             this.Controls.Add(this.LoginSubmit);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "login";
+            this.Text = "登录";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

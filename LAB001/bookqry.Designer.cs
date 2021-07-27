@@ -150,7 +150,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "BookQry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "bookqry";
+            this.Text = "书刊查询";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BookQryClosing);
             this.Load += new System.EventHandler(this.BookQryLoad);
             this.panel1.ResumeLayout(false);
