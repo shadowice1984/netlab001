@@ -56,44 +56,80 @@ namespace LAB001
             this.Hide();
         }
 
+        void DebugO(string name)
+        {
+            Console.WriteLine(name);
+            Console.WriteLine(BookQryBtn2.Visible);
+            Console.WriteLine(UserQryBtn.Visible);
+            Console.WriteLine(UserQryBtn.Visible);
+        }
+
         private void QryBtnEntered(object sender, EventArgs e)
         {
-            QryLayout.Visible = true;
+            // Console.WriteLine("Entered.");
+
+            BookQryBtn2.Visible = true;
+            UserQryBtn.Visible = true;
+            RecordQryBtn.Visible = true;
+            // QryLayout.Visible = true;
             QryBtn.Visible = false;
+            this.BackgroundImage = LAB001.Properties.Resources.index2;
+
+            // DebugO("QryBtnEntered");
         }
 
         private void BookQryOnClicked(object sender, EventArgs e)
         {
-            
+            // Console.WriteLine("!!!!");
+
             bookqry_window = new BookQry(this);
             bookqry_window.Show();
-            QryLayout.Visible = true;
-            QryBtn.Visible = false;
-            this.Hide();
-        }
-
-        private void QryLayerLeave(object sender, EventArgs e)
-        {
-            QryLayout.Visible = false;
+            // QryLayout.Visible = false;
+            BookQryBtn2.Visible = false;
+            UserQryBtn.Visible = false;
+            RecordQryBtn.Visible = false;
             QryBtn.Visible = true;
+            this.BackgroundImage = LAB001.Properties.Resources.index;
+            this.Hide();
         }
 
         private void BookQryBtnLeave(object sender, EventArgs e)
         {
-            QryLayout.Visible = false;
+            // Console.WriteLine("BookQry Leave");
+            // QryLayout.Visible = false;
+            BookQryBtn2.Visible = false;
+            UserQryBtn.Visible = false;
+            RecordQryBtn.Visible = false;
             QryBtn.Visible = true;
+            this.BackgroundImage = LAB001.Properties.Resources.index;
+
+            // DebugO("BookQryBtnLeave");
         }
 
         private void UserQryBtnLeave(object sender, EventArgs e)
         {
-            QryLayout.Visible = false;
+            // Console.WriteLine("UserQry Leave");
+            // QryLayout.Visible = false;
+            BookQryBtn2.Visible = false;
+            UserQryBtn.Visible = false;
+            RecordQryBtn.Visible = false;
             QryBtn.Visible = true;
+            this.BackgroundImage = LAB001.Properties.Resources.index;
+
+            // DebugO("UserQryBtnLeave");
         }
 
         private void RecordQryBtnLeave(object sender, EventArgs e)
         {
-            QryLayout.Visible = false;
+            // Console.WriteLine("RecordQry Leave");
+            // QryLayout.Visible = false;
+            BookQryBtn2.Visible = false;
+            UserQryBtn.Visible = false;
+            RecordQryBtn.Visible = false;
             QryBtn.Visible = true;
+            this.BackgroundImage = LAB001.Properties.Resources.index;
+
+            // DebugO("RecBtnLeave");
         }
 
         private void IndexAdminClosing(object sender, FormClosingEventArgs e) => parent.Close();
@@ -102,8 +138,12 @@ namespace LAB001
         {
             userqry_window = new UserQry(this);
             userqry_window.Show();
-            QryLayout.Visible = true;
-            QryBtn.Visible = false;
+            // QryLayout.Visible = false;
+            BookQryBtn2.Visible = false;
+            UserQryBtn.Visible = false;
+            RecordQryBtn.Visible = false;
+            QryBtn.Visible = true;
+            this.BackgroundImage = LAB001.Properties.Resources.index;
             this.Hide();
         }
 
@@ -111,8 +151,12 @@ namespace LAB001
         {
             recordqry_window = new RecordQry(this);
             recordqry_window.Show();
-            QryLayout.Visible = true;
-            QryBtn.Visible = false;
+            // QryLayout.Visible = false;
+            BookQryBtn2.Visible = false;
+            UserQryBtn.Visible = false;
+            RecordQryBtn.Visible = false;
+            QryBtn.Visible = true;
+            this.BackgroundImage = LAB001.Properties.Resources.index;
             this.Hide();
         }
 
@@ -120,5 +164,16 @@ namespace LAB001
         {
             this.Close();
         }
+
+        private void IndexAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QryBtn_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("FUCK");
+        }
+
     }
 }

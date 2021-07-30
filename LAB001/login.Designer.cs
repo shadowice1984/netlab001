@@ -40,42 +40,52 @@ namespace LAB001
             // 
             // LoginSubmit
             // 
-            this.LoginSubmit.Location = new System.Drawing.Point(119, 203);
+            this.LoginSubmit.BackColor = System.Drawing.Color.Transparent;
+            this.LoginSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoginSubmit.FlatAppearance.BorderSize = 0;
+            this.LoginSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.LoginSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.LoginSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginSubmit.ForeColor = System.Drawing.Color.Transparent;
+            this.LoginSubmit.Location = new System.Drawing.Point(137, 235);
             this.LoginSubmit.Name = "LoginSubmit";
             this.LoginSubmit.Size = new System.Drawing.Size(75, 23);
             this.LoginSubmit.TabIndex = 3;
-            this.LoginSubmit.Text = "提交";
-            this.LoginSubmit.UseVisualStyleBackColor = true;
+            this.LoginSubmit.UseVisualStyleBackColor = false;
             this.LoginSubmit.Click += new System.EventHandler(this.LoginSubmit_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(76, 109);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("华文中宋", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(137, 125);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.Size = new System.Drawing.Size(57, 19);
             this.label1.TabIndex = 101;
             this.label1.Text = "用户名";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 143);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("华文中宋", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(153, 179);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.Size = new System.Drawing.Size(41, 19);
             this.label2.TabIndex = 102;
             this.label2.Text = "密码";
             // 
             // UserName
             // 
-            this.UserName.Location = new System.Drawing.Point(200, 106);
+            this.UserName.Location = new System.Drawing.Point(254, 125);
             this.UserName.Name = "UserName";
             this.UserName.Size = new System.Drawing.Size(100, 21);
             this.UserName.TabIndex = 1;
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(200, 143);
+            this.Password.Location = new System.Drawing.Point(254, 178);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(100, 21);
             this.Password.TabIndex = 2;
@@ -84,26 +94,36 @@ namespace LAB001
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(198, 45);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("华文中宋", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(220, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.Size = new System.Drawing.Size(50, 23);
             this.label3.TabIndex = 100;
             this.label3.Text = "登录";
             // 
             // GotoReginster
             // 
-            this.GotoReginster.Location = new System.Drawing.Point(234, 203);
+            this.GotoReginster.BackColor = System.Drawing.Color.Transparent;
+            this.GotoReginster.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GotoReginster.FlatAppearance.BorderSize = 0;
+            this.GotoReginster.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.GotoReginster.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.GotoReginster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GotoReginster.ForeColor = System.Drawing.Color.Transparent;
+            this.GotoReginster.Location = new System.Drawing.Point(279, 235);
             this.GotoReginster.Name = "GotoReginster";
             this.GotoReginster.Size = new System.Drawing.Size(75, 23);
             this.GotoReginster.TabIndex = 4;
-            this.GotoReginster.Text = "注册";
-            this.GotoReginster.UseVisualStyleBackColor = true;
+            this.GotoReginster.UseVisualStyleBackColor = false;
             this.GotoReginster.Click += new System.EventHandler(this.GotoReginster_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::LAB001.Properties.Resources.login;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(484, 321);
             this.Controls.Add(this.GotoReginster);
             this.Controls.Add(this.label3);
@@ -112,6 +132,7 @@ namespace LAB001
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LoginSubmit);
+            this.DoubleBuffered = true;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "登录";
