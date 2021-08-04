@@ -29,6 +29,7 @@ namespace LAB001
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignIn));
             this.label1 = new System.Windows.Forms.Label();
             this.nameLb = new System.Windows.Forms.Label();
             this.passwordLb = new System.Windows.Forms.Label();
@@ -192,6 +193,7 @@ namespace LAB001
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.DimGray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "注册";

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckInOut));
             this.ApproveBtn = new System.Windows.Forms.Button();
             this.RejectBtn = new System.Windows.Forms.Button();
             this.BackBtn = new System.Windows.Forms.Button();
@@ -106,6 +107,7 @@
             this.Controls.Add(this.RejectBtn);
             this.Controls.Add(this.ApproveBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CheckInOut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "书刊借还管理";

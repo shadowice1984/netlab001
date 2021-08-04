@@ -29,6 +29,7 @@ namespace LAB001
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IndexAdmin));
             this.CheckInOutBtn = new System.Windows.Forms.Button();
             this.BookMngBtn = new System.Windows.Forms.Button();
             this.UserMngBtn = new System.Windows.Forms.Button();
@@ -189,6 +190,7 @@ namespace LAB001
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IndexAdmin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
