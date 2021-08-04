@@ -17,7 +17,7 @@ namespace LAB001
             InitializeComponent();
         }
         // protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\lab\db.mdf;Integrated Security=True;Connect Timeout=30");
-        protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\db.mdf';Integrated Security=True;Connect Timeout=30");
+        protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\Resources\db.mdf';Integrated Security=True;Connect Timeout=30");
         private void signin_Load(object sender, EventArgs e)
         {
 
@@ -82,54 +82,88 @@ namespace LAB001
 
             string reg_date = DateTime.Now.ToShortDateString().ToString();
             Console.WriteLine(reg_date);
-            Con.Open();
-            string cmdStr;
-            if (adminChk.Checked == true)
-            {
-                cmdStr = "INSERT INTO [dbo].[UserTab] ([number], [name], [password], [regdate], [isadmin], [isbanned]) VALUES (N'"+number.Text+"', N'"+name.Text+"', N'"+password.Text+"', N'"+reg_date+"', 1, 0)";
-            }
-            else 
-            {
-                cmdStr = "INSERT INTO [dbo].[UserTab] ([number], [name], [password], [regdate], [isadmin], [isbanned]) VALUES (N'" + number.Text + "', N'" + name.Text + "', N'" + password.Text + "', N'" + reg_date + "', 0, 0)";
-            }
-            SqlCommand cmd = new SqlCommand(cmdStr, Con);
-
             try
             {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("学号为" + number.Text +  "的用户注册成功!", "提示", MessageBoxButtons.OK);
-                name.Clear();
-                number.Clear();
-                password.Clear();
-                passwordConfirm.Clear();
-                adminChk.Checked = false;
-                this.Close();
+                Con.Open();
+                string cmdStr;
+                if (adminChk.Checked == true)
+                {
+                    cmdStr = "INSERT INTO [dbo].[UserTab] ([number], [name], [password], [regdate], [isadmin], [isbanned]) VALUES (N'" + number.Text + "', N'" + name.Text + "', N'" + password.Text + "', N'" + reg_date + "', 1, 0)";
+                }
+                else
+                {
+                    cmdStr = "INSERT INTO [dbo].[UserTab] ([number], [name], [password], [regdate], [isadmin], [isbanned]) VALUES (N'" + number.Text + "', N'" + name.Text + "', N'" + password.Text + "', N'" + reg_date + "', 0, 0)";
+                }
+                SqlCommand cmd = new SqlCommand(cmdStr, Con);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("学号为" + number.Text + "的用户注册成功!", "提示", MessageBoxButtons.OK);
+                    name.Clear();
+                    number.Clear();
+                    password.Clear();
+                    passwordConfirm.Clear();
+                    adminChk.Checked = false;
+                    this.Close();
+                }
+                catch (SqlException ex)
+                {
+                    bool UserDuplicateFlag = false;
+                    bool InvalidTableFlag = false;
+                    bool LocalDBMissing = false;
+                    for (int i = 0; i < ex.Errors.Count; i++)
+                    {
+                        if (ex.Errors[i].Number == 2627)
+                            UserDuplicateFlag = true;
+                        if (ex.Errors[i].Number == 2706 || ex.Errors[i].Number == 2702)
+                            InvalidTableFlag = true;
+
+                    }
+                    if (InvalidTableFlag)
+                        MessageBox.Show("数据库或表格文件错误：不存在或已损坏。");
+                    else if (UserDuplicateFlag)
+                        MessageBox.Show("该学号已被注册!", "提示", MessageBoxButtons.OK);
+                    else if (LocalDBMissing)
+                        MessageBox.Show("请安装 SQL Server LocalDB 2017 及以上版本！", "数据库连接错误");
+                    else
+                        MessageBox.Show("未处理的 SQL 异常：" + ex, "提示", MessageBoxButtons.OK);
+                    Console.WriteLine(ex);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("未辨明的异常：" + ex);
+                }
+
+                Con.Close();
             }
             catch (SqlException ex)
             {
                 bool UserDuplicateFlag = false;
                 bool InvalidTableFlag = false;
+                bool LocalDBMissing = false;
                 for (int i = 0; i < ex.Errors.Count; i++)
                 {
                     if (ex.Errors[i].Number == 2627)
                         UserDuplicateFlag = true;
                     if (ex.Errors[i].Number == 2706 || ex.Errors[i].Number == 2702)
                         InvalidTableFlag = true;
+
                 }
                 if (InvalidTableFlag)
                     MessageBox.Show("数据库或表格文件错误：不存在或已损坏。");
                 else if (UserDuplicateFlag)
                     MessageBox.Show("该学号已被注册!", "提示", MessageBoxButtons.OK);
+                else if (LocalDBMissing)
+                    MessageBox.Show("请安装 SQLServer Express LocalDB 2017 及以上版本！", "数据库连接错误");
                 else
                     MessageBox.Show("未处理的 SQL 异常：" + ex, "提示", MessageBoxButtons.OK);
                 Console.WriteLine(ex);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("未辨明的异常：" + ex);
+                MessageBox.Show("数据库连接错误,请安装 SQL Server LocalDB 2017 及以上版本！", "数据库连接错误");
+                MessageBox.Show(ex.ToString(), "错误详细信息");
             }
-
-            Con.Close();
         }
     }
 }

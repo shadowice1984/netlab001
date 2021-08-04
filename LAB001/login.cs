@@ -19,7 +19,7 @@ namespace LAB001
         }
 
         // protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\lab\db.mdf;Integrated Security=True;Connect Timeout=30");
-        protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\db.mdf';Integrated Security=True;Connect Timeout=30");
+        protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\Resources\db.mdf';Integrated Security=True;Connect Timeout=30");
         private IndexAdmin indexadmin_window;
 
         private void Login_Load(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace LAB001
                 SqlDataReader dr = cmd.ExecuteReader();
                 // Console.WriteLine("**!!!!" + dr.Read());
                 if (dr.Read() == false)
-                {    
+                {
                     MessageBox.Show("学号或密码错误！");
                     Con.Close();
                     return;
@@ -64,13 +64,20 @@ namespace LAB001
             catch (SqlException ex)
             {
                 bool InvalidTableFlag = false;
+                bool LocalDBMissing = false;
                 for (int i = 0; i < ex.Errors.Count; i++)
                 {
                     if (ex.Errors[i].Number == 2706 || ex.Errors[i].Number == 2702)
                         InvalidTableFlag = true;
+                    if (ex.Errors[i].Number == 2)
+                    {
+                        LocalDBMissing = true;
+                    }
                 }
                 if (InvalidTableFlag)
                     MessageBox.Show("数据库或表格文件错误：不存在或已损坏。");
+                else if (LocalDBMissing)
+                    MessageBox.Show("请安装 SQLServer Express LocalDB 2017 及以上版本！", "数据库连接错误");
                 else
                     MessageBox.Show("未处理的 SQL 异常：" + ex, "提示", MessageBoxButtons.OK);
                 Console.WriteLine(ex);
@@ -78,6 +85,7 @@ namespace LAB001
             catch (Exception ex)
             {
                 Console.WriteLine("未辨明的异常：" + ex);
+                MessageBox.Show("未辨明的异常：" + ex.ToString(), "错误详细信息");
             }
             Con.Close();
         }

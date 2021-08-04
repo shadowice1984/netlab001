@@ -14,7 +14,7 @@ namespace LAB001
     public partial class RecordQry : Form
     {
         // protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\lab\db.mdf;Integrated Security=True;Connect Timeout=30");
-        protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\db.mdf';Integrated Security=True;Connect Timeout=30");
+        protected SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\Resources\db.mdf';Integrated Security=True;Connect Timeout=30");
         protected SqlDataAdapter dataadepter;
         protected SqlCommandBuilder cmdbuilder;
         string sql_wholetab = "SELECT * FROM [dbo].[CheckInOutTab]";
