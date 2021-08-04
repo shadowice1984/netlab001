@@ -61,7 +61,7 @@ namespace LAB001
 
         private void IsModify_Click(object sender, EventArgs e)
         {
-            if (IsModify.Text.Equals("修改用户数据"))
+            if (IsModify.Text.Equals("修改数据"))
             {
                 // Console.WriteLine("!!!");
 
@@ -69,9 +69,9 @@ namespace LAB001
                 UndoBtn.Enabled = true;
                 SaveBtn.Enabled = true;
                 DelBtn.Enabled = true;
-                IsModify.Text = "保存并退出修改";
+                IsModify.Text = "退出修改";
             }
-            else if (IsModify.Text.Equals("保存并退出修改"))
+            else if (IsModify.Text.Equals("退出修改"))
             {
                 // Console.WriteLine("123");
 
@@ -81,7 +81,7 @@ namespace LAB001
                 DelBtn.Enabled = false;
                 dataadepter.Update(bindingSource1.DataSource as DataTable);
 
-                IsModify.Text = "修改用户数据";
+                IsModify.Text = "修改数据";
             }
         }
 

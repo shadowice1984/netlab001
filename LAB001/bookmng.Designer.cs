@@ -42,18 +42,28 @@
             // 
             // IsModify
             // 
-            this.IsModify.Location = new System.Drawing.Point(293, 616);
+            this.IsModify.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IsModify.FlatAppearance.BorderSize = 0;
+            this.IsModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IsModify.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.IsModify.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.IsModify.Location = new System.Drawing.Point(293, 599);
             this.IsModify.Name = "IsModify";
             this.IsModify.Size = new System.Drawing.Size(129, 51);
             this.IsModify.TabIndex = 1;
-            this.IsModify.Text = "修改书刊数据";
+            this.IsModify.Text = "修改数据";
             this.IsModify.UseVisualStyleBackColor = true;
             this.IsModify.Click += new System.EventHandler(this.IsModify_Click);
             // 
             // UndoBtn
             // 
+            this.UndoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UndoBtn.Enabled = false;
-            this.UndoBtn.Location = new System.Drawing.Point(702, 616);
+            this.UndoBtn.FlatAppearance.BorderSize = 0;
+            this.UndoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UndoBtn.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.UndoBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.UndoBtn.Location = new System.Drawing.Point(702, 599);
             this.UndoBtn.Name = "UndoBtn";
             this.UndoBtn.Size = new System.Drawing.Size(129, 51);
             this.UndoBtn.TabIndex = 2;
@@ -63,8 +73,13 @@
             // 
             // SaveBtn
             // 
+            this.SaveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveBtn.Enabled = false;
-            this.SaveBtn.Location = new System.Drawing.Point(493, 616);
+            this.SaveBtn.FlatAppearance.BorderSize = 0;
+            this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBtn.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SaveBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.SaveBtn.Location = new System.Drawing.Point(493, 599);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(129, 51);
             this.SaveBtn.TabIndex = 3;
@@ -74,12 +89,16 @@
             // 
             // BackBtn
             // 
-            this.BackBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BackBtn.Location = new System.Drawing.Point(12, 607);
+            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackBtn.FlatAppearance.BorderSize = 0;
+            this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackBtn.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BackBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.BackBtn.Location = new System.Drawing.Point(12, 599);
             this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(79, 63);
+            this.BackBtn.Size = new System.Drawing.Size(68, 68);
             this.BackBtn.TabIndex = 4;
-            this.BackBtn.Text = "返回主界面";
+            this.BackBtn.Text = "返回";
             this.BackBtn.UseVisualStyleBackColor = true;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
@@ -99,8 +118,13 @@
             // 
             // DelBtn
             // 
+            this.DelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DelBtn.Enabled = false;
-            this.DelBtn.Location = new System.Drawing.Point(902, 616);
+            this.DelBtn.FlatAppearance.BorderSize = 0;
+            this.DelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DelBtn.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.DelBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.DelBtn.Location = new System.Drawing.Point(902, 599);
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(129, 51);
             this.DelBtn.TabIndex = 6;

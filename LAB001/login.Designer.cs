@@ -36,6 +36,7 @@ namespace LAB001
             this.Password = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.GotoReginster = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LoginSubmit
@@ -118,6 +119,17 @@ namespace LAB001
             this.GotoReginster.UseVisualStyleBackColor = false;
             this.GotoReginster.Click += new System.EventHandler(this.GotoReginster_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("华文中宋", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(319, 293);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(153, 19);
+            this.label4.TabIndex = 103;
+            this.label4.Text = "简单注册后即可登录";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -125,6 +137,7 @@ namespace LAB001
             this.BackgroundImage = global::LAB001.Properties.Resources.login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(484, 321);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.GotoReginster);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Password);
@@ -151,5 +164,6 @@ namespace LAB001
         private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button GotoReginster;
+        private System.Windows.Forms.Label label4;
     }
 }

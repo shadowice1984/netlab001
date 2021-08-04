@@ -40,7 +40,12 @@
             // 
             // ApproveBtn
             // 
-            this.ApproveBtn.Location = new System.Drawing.Point(1056, 187);
+            this.ApproveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ApproveBtn.FlatAppearance.BorderSize = 0;
+            this.ApproveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApproveBtn.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ApproveBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ApproveBtn.Location = new System.Drawing.Point(718, 595);
             this.ApproveBtn.Name = "ApproveBtn";
             this.ApproveBtn.Size = new System.Drawing.Size(150, 63);
             this.ApproveBtn.TabIndex = 1;
@@ -50,7 +55,12 @@
             // 
             // RejectBtn
             // 
-            this.RejectBtn.Location = new System.Drawing.Point(1056, 309);
+            this.RejectBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RejectBtn.FlatAppearance.BorderSize = 0;
+            this.RejectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RejectBtn.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.RejectBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.RejectBtn.Location = new System.Drawing.Point(425, 594);
             this.RejectBtn.Name = "RejectBtn";
             this.RejectBtn.Size = new System.Drawing.Size(150, 64);
             this.RejectBtn.TabIndex = 2;
@@ -60,28 +70,36 @@
             // 
             // BackBtn
             // 
-            this.BackBtn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BackBtn.Location = new System.Drawing.Point(1092, 607);
+            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackBtn.FlatAppearance.BorderSize = 0;
+            this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackBtn.Font = new System.Drawing.Font("华文中宋", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BackBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.BackBtn.Location = new System.Drawing.Point(12, 603);
             this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(160, 63);
+            this.BackBtn.Size = new System.Drawing.Size(76, 64);
             this.BackBtn.TabIndex = 3;
-            this.BackBtn.Text = "返回主界面";
+            this.BackBtn.Text = "返回";
             this.BackBtn.UseVisualStyleBackColor = true;
             this.BackBtn.Click += new System.EventHandler(this.BackbtnOnClicked);
             // 
             // DGVmain
             // 
+            this.DGVmain.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGVmain.BackgroundColor = System.Drawing.Color.White;
+            this.DGVmain.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVmain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVmain.Location = new System.Drawing.Point(12, 12);
+            this.DGVmain.Location = new System.Drawing.Point(82, 12);
             this.DGVmain.Name = "DGVmain";
             this.DGVmain.RowTemplate.Height = 23;
-            this.DGVmain.Size = new System.Drawing.Size(988, 658);
+            this.DGVmain.Size = new System.Drawing.Size(1101, 545);
             this.DGVmain.TabIndex = 4;
             // 
             // CheckInOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 682);
             this.Controls.Add(this.DGVmain);
             this.Controls.Add(this.BackBtn);

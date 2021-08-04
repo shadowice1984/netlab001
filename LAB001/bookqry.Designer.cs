@@ -46,9 +46,14 @@
             // 
             // ResetBtn
             // 
-            this.ResetBtn.Location = new System.Drawing.Point(695, 28);
+            this.ResetBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ResetBtn.FlatAppearance.BorderSize = 0;
+            this.ResetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetBtn.Font = new System.Drawing.Font("华文中宋", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ResetBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ResetBtn.Location = new System.Drawing.Point(819, 3);
             this.ResetBtn.Name = "ResetBtn";
-            this.ResetBtn.Size = new System.Drawing.Size(95, 23);
+            this.ResetBtn.Size = new System.Drawing.Size(146, 72);
             this.ResetBtn.TabIndex = 1;
             this.ResetBtn.Text = "重置筛选规则";
             this.ResetBtn.UseVisualStyleBackColor = true;
@@ -56,9 +61,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(276, 28);
+            this.textBox1.Font = new System.Drawing.Font("华文中宋", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox1.Location = new System.Drawing.Point(276, 22);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(269, 21);
+            this.textBox1.Size = new System.Drawing.Size(322, 33);
             this.textBox1.TabIndex = 2;
             // 
             // panel1
@@ -75,19 +81,29 @@
             // 
             // BackBtn
             // 
-            this.BackBtn.Location = new System.Drawing.Point(1099, 11);
+            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackBtn.FlatAppearance.BorderSize = 0;
+            this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackBtn.Font = new System.Drawing.Font("华文中宋", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BackBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.BackBtn.Location = new System.Drawing.Point(1156, 11);
             this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(138, 57);
+            this.BackBtn.Size = new System.Drawing.Size(69, 57);
             this.BackBtn.TabIndex = 5;
-            this.BackBtn.Text = "返回主界面";
+            this.BackBtn.Text = "返回";
             this.BackBtn.UseVisualStyleBackColor = true;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // AddBookFilter
             // 
-            this.AddBookFilter.Location = new System.Drawing.Point(582, 28);
+            this.AddBookFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddBookFilter.FlatAppearance.BorderSize = 0;
+            this.AddBookFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddBookFilter.Font = new System.Drawing.Font("华文中宋", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.AddBookFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.AddBookFilter.Location = new System.Drawing.Point(628, 3);
             this.AddBookFilter.Name = "AddBookFilter";
-            this.AddBookFilter.Size = new System.Drawing.Size(98, 23);
+            this.AddBookFilter.Size = new System.Drawing.Size(141, 72);
             this.AddBookFilter.TabIndex = 4;
             this.AddBookFilter.Text = "添加筛选规则";
             this.AddBookFilter.UseVisualStyleBackColor = true;
@@ -96,6 +112,7 @@
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("华文中宋", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "ISBN码",
@@ -107,14 +124,15 @@
             "出版日期",
             "数目",
             "在馆数目"});
-            this.comboBox1.Location = new System.Drawing.Point(3, 28);
+            this.comboBox1.Location = new System.Drawing.Point(3, 24);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(267, 20);
+            this.comboBox1.Size = new System.Drawing.Size(267, 29);
             this.comboBox1.TabIndex = 3;
             // 
             // PreviewLabel
             // 
             this.PreviewLabel.BackColor = System.Drawing.Color.White;
+            this.PreviewLabel.Font = new System.Drawing.Font("华文中宋", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.PreviewLabel.Location = new System.Drawing.Point(12, 9);
             this.PreviewLabel.Name = "PreviewLabel";
             this.PreviewLabel.Size = new System.Drawing.Size(1240, 55);
@@ -123,15 +141,18 @@
             // ResultLabel
             // 
             this.ResultLabel.AutoSize = true;
-            this.ResultLabel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ResultLabel.Font = new System.Drawing.Font("华文中宋", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ResultLabel.Location = new System.Drawing.Point(605, 169);
             this.ResultLabel.Name = "ResultLabel";
-            this.ResultLabel.Size = new System.Drawing.Size(74, 21);
+            this.ResultLabel.Size = new System.Drawing.Size(86, 21);
             this.ResultLabel.TabIndex = 5;
             this.ResultLabel.Text = "查询结果";
             // 
             // DGVmain
             // 
+            this.DGVmain.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGVmain.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DGVmain.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVmain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVmain.Location = new System.Drawing.Point(12, 202);
             this.DGVmain.Name = "DGVmain";

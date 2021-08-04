@@ -82,7 +82,7 @@ namespace LAB001
             }
             foreach (DataGridViewRow rows in DGVmain.SelectedRows)
             {
-                DGVmain.Rows[rows.Index].Cells[6].Value = 1;
+                DGVmain.Rows[rows.Index].Cells[5].Value = 1;
             }
             DGVmain.RefreshEdit();
             SaveData();
@@ -97,7 +97,7 @@ namespace LAB001
             }
             foreach (DataGridViewRow rows in DGVmain.SelectedRows)
             {
-                DGVmain.Rows[rows.Index].Cells[6].Value = -1;
+                DGVmain.Rows[rows.Index].Cells[5].Value = -1;
             }
             DGVmain.RefreshEdit();
             SaveData();
